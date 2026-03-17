@@ -355,14 +355,14 @@ function TargetMarketSection() {
           <p className="text-slate-600 max-w-2xl mx-auto">From high-end luxury dining to bustling quick-service, our platform scales to your operational needs.</p>
         </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {markets.map((market, i) => (
             <Reveal key={i} delay={i * 0.05}>
-              <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-lg hover:border-primary/20 transition-all duration-300 group cursor-pointer">
+              <div className="flex flex-col items-center text-center group cursor-pointer">
                 <img
                   src={market.img}
                   alt={market.name}
-                  className="h-20 w-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
+                  className="h-36 w-36 object-contain mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                 />
                 <h4 className="font-semibold text-slate-900">{market.name}</h4>
               </div>
