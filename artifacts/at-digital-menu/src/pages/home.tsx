@@ -335,14 +335,14 @@ function FeaturesSection() {
 
 function TargetMarketSection() {
   const markets = [
-    { icon: Utensils, name: "Fine Dining Restaurants" },
-    { icon: Coffee, name: "Cafes & Roasteries" },
-    { icon: Beer, name: "Bars, Pubs & Lounges" },
-    { icon: Hotel, name: "Hotels & Resorts" },
-    { icon: Store, name: "Cloud Kitchens" },
-    { icon: Pizza, name: "QSR & Fast Food" },
-    { icon: Croissant, name: "Bakeries & Sweets" },
-    { icon: MapPin, name: "Dhaba & Street Food" },
+    { img: `${import.meta.env.BASE_URL}images/restaurant.png`, name: "Fine Dining Restaurants" },
+    { img: `${import.meta.env.BASE_URL}images/cafe.png`, name: "Cafes & Roasteries" },
+    { img: `${import.meta.env.BASE_URL}images/bar.png`, name: "Bars, Pubs & Lounges" },
+    { img: `${import.meta.env.BASE_URL}images/hotel.png`, name: "Hotels & Resorts" },
+    { img: `${import.meta.env.BASE_URL}images/cloud-kitchen.png`, name: "Cloud Kitchens" },
+    { img: `${import.meta.env.BASE_URL}images/qsr.png`, name: "QSR & Fast Food" },
+    { img: `${import.meta.env.BASE_URL}images/bakery.png`, name: "Bakeries & Sweets" },
+    { img: `${import.meta.env.BASE_URL}images/street-food.png`, name: "Dhaba & Street Food" },
   ];
 
   return (
@@ -359,7 +359,11 @@ function TargetMarketSection() {
           {markets.map((market, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-lg hover:border-primary/20 transition-all duration-300 group cursor-pointer">
-                <market.icon className="h-8 w-8 text-slate-400 group-hover:text-primary mb-4 transition-colors" />
+                <img
+                  src={market.img}
+                  alt={market.name}
+                  className="h-20 w-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
+                />
                 <h4 className="font-semibold text-slate-900">{market.name}</h4>
               </div>
             </Reveal>
