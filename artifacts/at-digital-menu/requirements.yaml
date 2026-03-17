@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "For premium scroll animations and micro-interactions"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes in JS"
+
+images:
+  - path: "artifacts/at-digital-menu/public/images/hero-mockup.png"
+    description: "A sleek, minimal 3D render of a modern smartphone displaying an elegant, high-end restaurant digital menu on the screen. The phone is floating slightly angled against a pristine white background. Soft, diffused studio lighting creates a premium, airy aesthetic with subtle shadows."
+    aspect_ratio: "3:4"
+  - path: "artifacts/at-digital-menu/public/images/logo-icon.png"
+    description: "A minimal, premium logo mark for a restaurant tech company. It combines a clean, geometric letter 'A' and 'T' interwoven with a stylized dining cloche or fork. The color is a solid, rich deep amber orange on a transparent background."
+    aspect_ratio: "1:1"
+
+notes:
+  - Pure frontend landing page as requested, no backend integrations needed.
+  - Using framer-motion for smooth reveal animations.
+  - Form submission is handled with local UI state to simulate success.

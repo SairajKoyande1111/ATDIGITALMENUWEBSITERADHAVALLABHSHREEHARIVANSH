@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "AT Digital Menu"
+version = "1.0.0"
+id = "artifacts/at-digital-menu"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 18509
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/at-digital-menu run dev"
+
+[services.env]
+PORT = "18509"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/at-digital-menu", "run", "build"]
+publicDir = "artifacts/at-digital-menu/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
