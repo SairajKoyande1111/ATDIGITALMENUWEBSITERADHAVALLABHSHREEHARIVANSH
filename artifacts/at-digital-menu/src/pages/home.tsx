@@ -362,7 +362,7 @@ function TargetMarketSection() {
                 <img
                   src={market.img}
                   alt={market.name}
-                  className="h-36 w-36 object-contain mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
+                  className="h-48 w-48 object-contain mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                 />
                 <h4 className="font-semibold text-slate-900">{market.name}</h4>
               </div>
