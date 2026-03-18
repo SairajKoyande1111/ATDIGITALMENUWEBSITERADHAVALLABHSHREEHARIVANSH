@@ -483,82 +483,179 @@ function TestimonialsSection() {
 }
 
 function PricingSection() {
+  const plans = [
+    {
+      name: "Starter",
+      tagline: "Perfect for small cafes & kiosks",
+      price: "999",
+      period: "/month",
+      highlight: false,
+      badge: null,
+      color: "border-slate-200",
+      features: [
+        "Basic Digital Menu",
+        "Custom QR Code",
+        "Up to 50 Menu Items",
+        "WhatsApp Integration",
+        "Google Review Prompts",
+        "Standard Support",
+      ],
+      cta: "Start Free Trial",
+      ctaVariant: "outline" as const,
+    },
+    {
+      name: "Professional",
+      tagline: "Everything you need to grow fast",
+      price: "2,499",
+      period: "/month",
+      highlight: true,
+      badge: "Most Popular",
+      color: "border-primary/30",
+      features: [
+        "Everything in Starter",
+        "Unlimited Menu Items",
+        "AI Smart Picks & Filtering",
+        "Multi-Language Support",
+        "Customer Data Collection",
+        "Analytics Dashboard",
+        "Coupons, Offers & Discounts",
+        "Table Reservation",
+        "Payment Gateway",
+        "Priority Support",
+      ],
+      cta: "Get Professional",
+      ctaVariant: "default" as const,
+    },
+    {
+      name: "Enterprise",
+      tagline: "Built for multi-outlet chains",
+      price: "Custom",
+      period: "",
+      highlight: false,
+      badge: null,
+      color: "border-slate-200",
+      features: [
+        "Everything in Professional",
+        "Multi-outlet Dashboard",
+        "Bespoke Custom Design",
+        "Admin Panel",
+        "POS Integration",
+        "Custom QR Card Design",
+        "Dedicated Account Manager",
+        "SLA & Uptime Guarantee",
+      ],
+      cta: "Contact Sales",
+      ctaVariant: "outline" as const,
+    },
+  ];
+
   return (
-    <section id="pricing" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
-            Simple, Transparent Pricing
+    <section id="pricing" className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-100/60 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <Reveal className="text-center max-w-3xl mx-auto mb-6">
+          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide">Pricing Plans</span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+            Simple, <span className="text-primary">Transparent</span> Pricing
           </h2>
-          <p className="text-lg text-slate-600">No setup fees. No printing costs. Cancel anytime.</p>
+          <p className="text-lg text-slate-500">No setup fees. No printing costs. Cancel anytime.</p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
-          {/* Starter */}
-          <Reveal delay={0}>
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
-              <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">Starter</h3>
-              <p className="text-sm text-slate-500 mb-6">Perfect for small cafes.</p>
-              <div className="mb-6 flex items-baseline">
-                <span className="text-4xl font-bold text-slate-900 font-display">Rs.999</span>
-                <span className="text-slate-500 ml-2">/month</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                {['Basic Digital Menu', 'Custom QR Code', 'Up to 50 Items', 'Standard Support'].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-600">
-                    <Check className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="outline" className="w-full bg-white">Start Free Trial</Button>
-            </div>
-          </Reveal>
+        {/* Trust bar */}
+        <Reveal className="flex flex-wrap justify-center gap-6 mb-16 text-sm text-slate-500">
+          {["✓ No hidden charges", "✓ Free onboarding", "✓ Cancel anytime", "✓ 7-day free trial"].map((t, i) => (
+            <span key={i} className="font-medium">{t}</span>
+          ))}
+        </Reveal>
 
-          {/* Professional (Highlighted) */}
-          <Reveal delay={0.1}>
-            <div className="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-2xl md:scale-105 relative z-10">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
-                Most Popular
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-display">Professional</h3>
-              <p className="text-sm text-slate-400 mb-6">Everything you need to grow.</p>
-              <div className="mb-6 flex items-baseline">
-                <span className="text-5xl font-bold text-white font-display">Rs.2,499</span>
-                <span className="text-slate-400 ml-2">/month</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                {['Unlimited Items', 'AI Search & Filtering', 'WhatsApp Integration', 'Basic Analytics', 'Google Review Prompts'].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-300">
-                    <Check className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full">Get Professional</Button>
-            </div>
-          </Reveal>
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
+          {plans.map((plan, i) => (
+            <Reveal key={i} delay={i * 0.1}>
+              <div className={`relative flex flex-col h-full rounded-3xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
+                ${plan.highlight
+                  ? "bg-slate-900 border-primary/40 shadow-2xl shadow-primary/10"
+                  : "bg-white border-slate-200 shadow-sm"
+                }`}>
 
-          {/* Enterprise */}
-          <Reveal delay={0.2}>
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200">
-              <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">Enterprise</h3>
-              <p className="text-sm text-slate-500 mb-6">For multi-outlet chains.</p>
-              <div className="mb-6 flex items-baseline">
-                <span className="text-4xl font-bold text-slate-900 font-display">Custom</span>
+                {plan.badge && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                    <span className="bg-primary text-white text-xs font-bold tracking-widest uppercase px-5 py-1.5 rounded-full shadow-lg shadow-primary/30">
+                      {plan.badge}
+                    </span>
+                  </div>
+                )}
+
+                <div className="p-8 flex flex-col flex-1">
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h3 className={`text-2xl font-bold font-display mb-1 ${plan.highlight ? "text-white" : "text-slate-900"}`}>
+                      {plan.name}
+                    </h3>
+                    <p className={`text-sm ${plan.highlight ? "text-slate-400" : "text-slate-500"}`}>{plan.tagline}</p>
+                  </div>
+
+                  {/* Price */}
+                  <div className={`mb-6 pb-6 border-b ${plan.highlight ? "border-slate-700" : "border-slate-100"}`}>
+                    <div className="flex items-baseline gap-1">
+                      {plan.price !== "Custom" && (
+                        <span className={`text-sm font-semibold ${plan.highlight ? "text-slate-300" : "text-slate-500"}`}>Rs.</span>
+                      )}
+                      <span className={`text-5xl font-extrabold font-display tracking-tight ${plan.highlight ? "text-white" : "text-slate-900"}`}>
+                        {plan.price}
+                      </span>
+                      {plan.period && (
+                        <span className={`text-sm ml-1 ${plan.highlight ? "text-slate-400" : "text-slate-500"}`}>{plan.period}</span>
+                      )}
+                    </div>
+                    {plan.price !== "Custom" && (
+                      <p className={`text-xs mt-1 ${plan.highlight ? "text-slate-500" : "text-slate-400"}`}>Billed monthly · No contracts</p>
+                    )}
+                  </div>
+
+                  {/* Features */}
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {plan.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-3">
+                        <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center
+                          ${plan.highlight ? "bg-primary/20" : "bg-primary/10"}`}>
+                          <Check className="h-3 w-3 text-primary" />
+                        </span>
+                        <span className={`text-sm leading-relaxed ${
+                          feature.startsWith("Everything") 
+                            ? plan.highlight ? "text-primary font-semibold" : "text-primary font-semibold"
+                            : plan.highlight ? "text-slate-300" : "text-slate-600"
+                        }`}>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA */}
+                  <Button
+                    variant={plan.ctaVariant}
+                    className={`w-full py-3 text-sm font-semibold rounded-xl transition-all duration-200
+                      ${plan.highlight
+                        ? "bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/30"
+                        : "border-2 border-slate-200 hover:border-primary hover:text-primary bg-white"
+                      }`}
+                  >
+                    {plan.cta}
+                  </Button>
+                </div>
               </div>
-              <ul className="space-y-4 mb-8">
-                {['Multi-outlet Dashboard', 'Bespoke Custom Design', 'POS Integration Options', 'Dedicated Account Manager'].map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-600">
-                    <Check className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button variant="outline" className="w-full bg-white">Contact Sales</Button>
-            </div>
-          </Reveal>
+            </Reveal>
+          ))}
         </div>
+
+        {/* Bottom note */}
+        <Reveal className="text-center mt-12">
+          <p className="text-slate-500 text-sm">
+            All plans include a <span className="font-semibold text-slate-700">7-day free trial</span>. Need something different?{" "}
+            <a href="#contact" className="text-primary font-semibold hover:underline">Talk to us →</a>
+          </p>
+        </Reveal>
       </div>
     </section>
   );
