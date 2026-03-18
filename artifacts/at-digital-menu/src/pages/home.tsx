@@ -37,7 +37,7 @@ function Navbar() {
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="AT Digital Menu"
-              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+              className="h-24 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
             />
           </Link>
 
