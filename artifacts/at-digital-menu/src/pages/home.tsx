@@ -378,10 +378,10 @@ function TargetMarketSection() {
         <Reveal className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-5 leading-tight">
             Designed for Every{" "}
-            <span style={{ color: "#cc7a00" }}>Food & Beverage Business</span>
+            <span style={{ color: "#cc7a00" }}>Food & Beverage</span> Business
           </h2>
-          <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-            From fine dining to fast-paced service, our platform adapts effortlessly to your operational needs.
+          <p className="text-slate-900 max-w-2xl mx-auto text-lg leading-relaxed">
+            From Fine Dining to Fast Paced Service, Our Platform Adapts Effortlessly to your Operational Needs
           </p>
         </Reveal>
 
