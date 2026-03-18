@@ -304,6 +304,13 @@ function FeaturesSection() {
     { img: `${BASE}images/social-media.png`, title: "Social Media Links", desc: "Connect your Instagram, Facebook, and YouTube directly in the menu." },
     { img: `${BASE}images/table-reservation.png`, title: "Table Reservation", desc: "Let guests reserve tables directly from the digital menu — no calls needed." },
     { img: `${BASE}images/no-print.png`, title: "Zero Printing Cost", desc: "Eliminate reprinting budgets forever. Pay one flat fee." },
+    { title: "Light & Dark Mode", desc: "" },
+    { title: "Welcome Sound", desc: "" },
+    { title: "Coupons, Offers & Discounts", desc: "" },
+    { title: "AI Smart Picks", desc: "" },
+    { title: "Tap to Call Waiter", desc: "" },
+    { title: "Payment Gateway", desc: "" },
+    { title: "Admin Panel", desc: "" },
   ];
 
   return (
@@ -331,7 +338,11 @@ function FeaturesSection() {
                     <div className="w-20 h-20 bg-primary/5 text-primary rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                       <feature.icon className="h-10 w-10" />
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="w-20 h-20 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 flex items-center justify-center">
+                      <span className="text-xs text-slate-400 font-medium">Soon</span>
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-base font-bold text-slate-900 font-display leading-snug">{feature.title}</h3>
               </div>
