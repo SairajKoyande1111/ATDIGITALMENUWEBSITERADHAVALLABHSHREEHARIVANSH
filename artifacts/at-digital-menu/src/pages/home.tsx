@@ -401,15 +401,16 @@ function TargetMarketSection() {
 }
 
 function ValueSection() {
+  const BASE = import.meta.env.BASE_URL;
   const values = [
-    { emoji: "💰", bg: "bg-green-50", ring: "ring-green-100", title: "Zero Printing Cost", desc: "Eliminate recurring printing expenses and save ₹1,00,000+ annually." },
-    { emoji: "⚡", bg: "bg-amber-50", ring: "ring-amber-100", title: "Instant Control", desc: "Update prices, items, or offers in real-time across all tables." },
-    { emoji: "🤖", bg: "bg-red-50", ring: "ring-red-100", title: "AI Insights", desc: "Use data-driven insights to boost sales and optimize your menu strategy." },
-    { emoji: "📣", bg: "bg-blue-50", ring: "ring-blue-100", title: "Smart Marketing", desc: "Share your menu on WhatsApp & Instagram to attract new customers organically." },
-    { emoji: "🦠", bg: "bg-purple-50", ring: "ring-purple-100", title: "Touch-Free Dining", desc: "Provide a 100% contactless and hygienic experience via QR menus." },
-    { emoji: "🌱", bg: "bg-emerald-50", ring: "ring-emerald-100", title: "Eco Impact", desc: "Go fully paperless and build a strong, eco-friendly brand image." },
-    { emoji: "🎯", bg: "bg-orange-50", ring: "ring-orange-100", title: "High Engagement", desc: "Use images, videos, and offers to increase customer interest and conversions." },
-    { emoji: "🧠", bg: "bg-indigo-50", ring: "ring-indigo-100", title: "Smart Intelligence", desc: "Track customer behavior, preferences, and ordering patterns effortlessly." },
+    { img: `${BASE}images/adv-zero-printing.png`, title: "Zero Printing Cost", desc: "Eliminate recurring printing expenses and save ₹1,00,000+ annually." },
+    { img: `${BASE}images/adv-instant-control.png`, title: "Instant Control", desc: "Update prices, items, or offers in real-time across all tables." },
+    { img: `${BASE}images/adv-ai-insights.png`, title: "AI Insights", desc: "Use data-driven insights to boost sales and optimize your menu strategy." },
+    { img: `${BASE}images/adv-smart-marketing.png`, title: "Smart Marketing", desc: "Share your menu on WhatsApp & Instagram to attract new customers organically." },
+    { img: `${BASE}images/adv-touch-free.png`, title: "Touch-Free Dining", desc: "Provide a 100% contactless and hygienic experience via QR menus." },
+    { img: `${BASE}images/adv-eco-impact.png`, title: "Eco Impact", desc: "Go fully paperless and build a strong, eco-friendly brand image." },
+    { img: `${BASE}images/adv-high-engagement.png`, title: "High Engagement", desc: "Use images, videos, and offers to increase customer interest and conversions." },
+    { img: `${BASE}images/adv-smart-intelligence.png`, title: "Smart Intelligence", desc: "Track customer behavior, preferences, and ordering patterns effortlessly." },
   ];
 
   return (
@@ -423,14 +424,16 @@ function ValueSection() {
           <p className="text-lg text-slate-500">Every feature is designed to save you money, time, and effort.</p>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
           {values.map((val, i) => (
             <Reveal key={i} delay={i * 0.07}>
-              <div className="group bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className={`w-14 h-14 ${val.bg} ring-4 ${val.ring} rounded-2xl flex items-center justify-center mb-5 text-2xl group-hover:scale-110 transition-transform duration-300`}>
-                  {val.emoji}
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 font-display mb-2">{val.title}</h3>
+              <div className="group flex flex-col items-center text-center">
+                <img
+                  src={val.img}
+                  alt={val.title}
+                  className="w-28 h-28 object-contain mb-5 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
+                />
+                <h3 className="text-base font-bold text-slate-900 font-display mb-1.5">{val.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{val.desc}</p>
               </div>
             </Reveal>
