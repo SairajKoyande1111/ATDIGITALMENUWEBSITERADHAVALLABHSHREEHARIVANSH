@@ -307,7 +307,7 @@ function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-24 bg-slate-50">
+    <section id="features" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
@@ -319,22 +319,21 @@ function FeaturesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {features.map((feature, i) => (
             <Reveal key={i} delay={i * 0.05}>
-              <div className="bg-white p-6 rounded-2xl border border-slate-100 card-hover h-full group">
-                <div className="w-14 h-14 flex items-center justify-center mb-5">
+              <div className="flex items-center gap-4 group cursor-pointer">
+                <div className="shrink-0">
                   {feature.img ? (
                     <img
                       src={feature.img}
                       alt={feature.title}
-                      className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow"
+                      className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
                     />
                   ) : feature.icon ? (
-                    <div className="w-14 h-14 bg-primary/5 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                      <feature.icon className="h-7 w-7" />
+                    <div className="w-20 h-20 bg-primary/5 text-primary rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      <feature.icon className="h-10 w-10" />
                     </div>
                   ) : null}
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2 font-display">{feature.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-base font-bold text-slate-900 font-display leading-snug">{feature.title}</h3>
               </div>
             </Reveal>
           ))}
