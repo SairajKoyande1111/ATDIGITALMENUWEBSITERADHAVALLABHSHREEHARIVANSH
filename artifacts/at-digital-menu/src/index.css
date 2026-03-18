@@ -35,8 +35,8 @@
   --background: 0 0% 100%;
   --foreground: 222 47% 11%;
   
-  /* Deep Orange / Amber Accent */
-  --primary: 28 96% 53%;
+  /* Brand Gold */
+  --primary: 36 100% 40%;
   --primary-foreground: 0 0% 100%;
   
   --secondary: 210 40% 96%;
@@ -46,7 +46,7 @@
   --muted-foreground: 215 16% 47%;
   
   --accent: 35 92% 95%;
-  --accent-foreground: 28 96% 40%;
+  --accent-foreground: 36 100% 40%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
