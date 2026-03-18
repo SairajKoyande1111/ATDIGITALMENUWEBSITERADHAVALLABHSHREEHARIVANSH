@@ -402,33 +402,36 @@ function TargetMarketSection() {
 
 function ValueSection() {
   const values = [
-    { icon: Zap, title: "Instant Updates", desc: "Make changes that reflect immediately on every table." },
-    { icon: PiggyBank, title: "Cost Elimination", desc: "Never pay for menu printing, binding, or design corrections again." },
-    { icon: Leaf, title: "Sustainability", desc: "Run a paperless operation and appeal to eco-conscious diners." },
-    { icon: Share2, title: "Smart Marketing", desc: "Share your beautiful menu via WhatsApp/Instagram for free reach." },
-    { icon: BrainCircuit, title: "Guest Intelligence", desc: "Collect data from every visit to run targeted retention campaigns." },
+    { emoji: "🚫", bg: "bg-red-50", ring: "ring-red-100", title: "Zero Print Cost", desc: "Completely eliminate printing, binding, and redesign expenses forever." },
+    { emoji: "⚡", bg: "bg-amber-50", ring: "ring-amber-100", title: "Instant Control", desc: "Update prices, items, or offers in real-time across all tables." },
+    { emoji: "💰", bg: "bg-green-50", ring: "ring-green-100", title: "Zero Printing Cost", desc: "Eliminate recurring printing expenses and save ₹1,00,000+ annually." },
+    { emoji: "📣", bg: "bg-blue-50", ring: "ring-blue-100", title: "Smart Marketing", desc: "Share your menu on WhatsApp & Instagram to attract new customers organically." },
+    { emoji: "🦠", bg: "bg-purple-50", ring: "ring-purple-100", title: "Touch-Free Dining", desc: "Provide a 100% contactless and hygienic experience via QR menus." },
+    { emoji: "🌱", bg: "bg-emerald-50", ring: "ring-emerald-100", title: "Eco Impact", desc: "Go fully paperless and build a strong, eco-friendly brand image." },
+    { emoji: "🎯", bg: "bg-orange-50", ring: "ring-orange-100", title: "High Engagement", desc: "Use images, videos, and offers to increase customer interest and conversions." },
+    { emoji: "🧠", bg: "bg-indigo-50", ring: "ring-indigo-100", title: "Smart Intelligence", desc: "Track customer behavior, preferences, and ordering patterns effortlessly." },
   ];
 
   return (
-    <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-white">
-            The AT Digital Menu Advantage
+          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide">Why Choose Us</span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+            The AT Digital Menu <span className="text-primary">Advantage</span>
           </h2>
+          <p className="text-lg text-slate-500">Every feature is designed to save you money, time, and effort.</p>
         </Reveal>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((val, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300 backdrop-blur-sm">
-                  <val.icon className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
+            <Reveal key={i} delay={i * 0.07}>
+              <div className="group bg-white border border-slate-100 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className={`w-14 h-14 ${val.bg} ring-4 ${val.ring} rounded-2xl flex items-center justify-center mb-5 text-2xl group-hover:scale-110 transition-transform duration-300`}>
+                  {val.emoji}
                 </div>
-                <h3 className="text-lg font-bold mb-3 font-display text-white">{val.title}</h3>
-                <p className="text-sm text-slate-400">{val.desc}</p>
+                <h3 className="text-lg font-bold text-slate-900 font-display mb-2">{val.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{val.desc}</p>
               </div>
             </Reveal>
           ))}
