@@ -290,17 +290,18 @@ function SolutionSection() {
 }
 
 function FeaturesSection() {
-  const features = [
+  const BASE = import.meta.env.BASE_URL;
+  const features: { icon?: React.ElementType; img?: string; title: string; desc: string }[] = [
     { icon: Paintbrush, title: "Professional Custom Design", desc: "Bespoke design matching your brand identity. Mobile-first and beautiful." },
     { icon: Zap, title: "Instant Real-Time Updates", desc: "Change prices, add items, or fix typos in seconds. Zero downtime." },
     { icon: LinkIcon, title: "QR Code + Link Access", desc: "Scannable table QRs and shareable web links for Instagram bios." },
     { icon: Mic, title: "AI-Powered Assistant", desc: "Voice search, smart recommendations, and dynamic allergen filtering." },
-    { icon: Phone, title: "WhatsApp Integration", desc: "Direct ordering and customer queries routed straight to staff phones." },
-    { icon: ThumbsUp, title: "Google Review Prompts", desc: "Automated, one-tap review requests post-meal to boost your rating." },
-    { icon: Globe, title: "Multi-Language Support", desc: "Serve international guests effortlessly with auto-translation." },
-    { icon: Users, title: "Customer Data Collection", desc: "Capture names, numbers, and visit history to build your CRM." },
+    { img: `${BASE}images/whatsapp.png`, title: "WhatsApp Integration", desc: "Direct ordering and customer queries routed straight to staff phones." },
+    { img: `${BASE}images/google-review.png`, title: "Google Review Prompts", desc: "Automated, one-tap review requests post-meal to boost your rating." },
+    { img: `${BASE}images/multilang.png`, title: "Multi-Language Support", desc: "Serve international guests effortlessly with auto-translation." },
+    { img: `${BASE}images/customer-data.png`, title: "Customer Data Collection", desc: "Capture names, numbers, and visit history to build your CRM." },
     { icon: BarChart3, title: "Analytics Dashboard", desc: "See what customers browse, click, and order to optimize your menu." },
-    { icon: Share2, title: "Social Media Links", desc: "Connect your Instagram, Facebook, and YouTube directly in the menu." },
+    { img: `${BASE}images/social-media.png`, title: "Social Media Links", desc: "Connect your Instagram, Facebook, and YouTube directly in the menu." },
     { icon: Ban, title: "Instant Sold-Out Marking", desc: "Mark items unavailable instantly to avoid customer disappointment." },
     { icon: Banknote, title: "Zero Printing Cost", desc: "Eliminate reprinting budgets forever. Pay one flat fee." },
   ];
@@ -319,8 +320,18 @@ function FeaturesSection() {
           {features.map((feature, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <div className="bg-white p-6 rounded-2xl border border-slate-100 card-hover h-full group">
-                <div className="w-12 h-12 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                  <feature.icon className="h-6 w-6" />
+                <div className="w-14 h-14 flex items-center justify-center mb-5">
+                  {feature.img ? (
+                    <img
+                      src={feature.img}
+                      alt={feature.title}
+                      className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow"
+                    />
+                  ) : feature.icon ? (
+                    <div className="w-14 h-14 bg-primary/5 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      <feature.icon className="h-7 w-7" />
+                    </div>
+                  ) : null}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2 font-display">{feature.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{feature.desc}</p>
