@@ -311,6 +311,11 @@ function FeaturesSection() {
     { title: "Tap to Call Waiter", desc: "" },
     { title: "Payment Gateway", desc: "" },
     { title: "Admin Panel", desc: "" },
+    { title: "Custom QR Card Design", desc: "" },
+    { title: "Google Map Integration", desc: "" },
+    { title: "One Tap Call", desc: "" },
+    { title: "Nutritional Content, Allergens & Ingredients", desc: "" },
+    { title: "Live Menu Availability Control", desc: "" },
   ];
 
   return (
