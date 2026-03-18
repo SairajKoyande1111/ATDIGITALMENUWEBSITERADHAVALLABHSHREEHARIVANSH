@@ -33,11 +33,12 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="h-10 w-10 bg-primary rounded-xl flex items-center justify-center text-white font-display font-bold text-xl shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-              AT
-            </div>
-            <span className="font-display font-bold text-xl text-slate-900 hidden sm:block">Digital Menu</span>
+          <Link href="/" className="group">
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              alt="AT Digital Menu"
+              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+            />
           </Link>
 
           {/* Desktop Nav */}
