@@ -33,11 +33,11 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group overflow-visible">
+          <Link href="/" className="group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="AT Digital Menu"
-              className="h-12 w-auto object-contain origin-left scale-[2.8] group-hover:scale-[2.9] transition-transform duration-200"
+              className="w-44 h-auto object-contain group-hover:scale-105 transition-transform duration-200"
             />
           </Link>
 
