@@ -292,18 +292,18 @@ function SolutionSection() {
 function FeaturesSection() {
   const BASE = import.meta.env.BASE_URL;
   const features: { icon?: React.ElementType; img?: string; title: string; desc: string }[] = [
-    { icon: Paintbrush, title: "Professional Custom Design", desc: "Bespoke design matching your brand identity. Mobile-first and beautiful." },
-    { icon: Zap, title: "Instant Real-Time Updates", desc: "Change prices, add items, or fix typos in seconds. Zero downtime." },
-    { icon: LinkIcon, title: "QR Code + Link Access", desc: "Scannable table QRs and shareable web links for Instagram bios." },
-    { icon: Mic, title: "AI-Powered Assistant", desc: "Voice search, smart recommendations, and dynamic allergen filtering." },
+    { img: `${BASE}images/custom-design.png`, title: "Professional Custom Design", desc: "Bespoke design matching your brand identity. Mobile-first and beautiful." },
+    { img: `${BASE}images/realtime.png`, title: "Instant Real-Time Updates", desc: "Change prices, add items, or fix typos in seconds. Zero downtime." },
+    { img: `${BASE}images/qr-access.png`, title: "QR Code + Link Access", desc: "Scannable table QRs and shareable web links for Instagram bios." },
+    { img: `${BASE}images/ai-assistant.png`, title: "AI-Powered Assistant", desc: "Voice search, smart recommendations, and dynamic allergen filtering." },
     { img: `${BASE}images/whatsapp.png`, title: "WhatsApp Integration", desc: "Direct ordering and customer queries routed straight to staff phones." },
     { img: `${BASE}images/google-review.png`, title: "Google Review Prompts", desc: "Automated, one-tap review requests post-meal to boost your rating." },
     { img: `${BASE}images/multilang.png`, title: "Multi-Language Support", desc: "Serve international guests effortlessly with auto-translation." },
     { img: `${BASE}images/customer-data.png`, title: "Customer Data Collection", desc: "Capture names, numbers, and visit history to build your CRM." },
-    { icon: BarChart3, title: "Analytics Dashboard", desc: "See what customers browse, click, and order to optimize your menu." },
+    { img: `${BASE}images/analytics.png`, title: "Analytics Dashboard", desc: "See what customers browse, click, and order to optimize your menu." },
     { img: `${BASE}images/social-media.png`, title: "Social Media Links", desc: "Connect your Instagram, Facebook, and YouTube directly in the menu." },
-    { icon: Ban, title: "Instant Sold-Out Marking", desc: "Mark items unavailable instantly to avoid customer disappointment." },
-    { icon: Banknote, title: "Zero Printing Cost", desc: "Eliminate reprinting budgets forever. Pay one flat fee." },
+    { img: `${BASE}images/table-reservation.png`, title: "Table Reservation", desc: "Let guests reserve tables directly from the digital menu — no calls needed." },
+    { img: `${BASE}images/no-print.png`, title: "Zero Printing Cost", desc: "Eliminate reprinting budgets forever. Pay one flat fee." },
   ];
 
   return (
