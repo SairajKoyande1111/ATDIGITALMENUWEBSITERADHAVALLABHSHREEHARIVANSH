@@ -167,7 +167,7 @@ function HeroSection() {
       </div>
       
       {/* CSS for custom float animation */}
-      <style dangerouslySetInlineStyle={{__html: `
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes float {
           0% { transform: translateY(0px); }
           50% { transform: translateY(-15px); }
