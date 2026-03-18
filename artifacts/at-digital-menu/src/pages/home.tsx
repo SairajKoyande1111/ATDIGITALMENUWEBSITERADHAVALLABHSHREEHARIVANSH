@@ -402,9 +402,9 @@ function TargetMarketSection() {
 
 function ValueSection() {
   const values = [
-    { emoji: "🚫", bg: "bg-red-50", ring: "ring-red-100", title: "Zero Print Cost", desc: "Completely eliminate printing, binding, and redesign expenses forever." },
-    { emoji: "⚡", bg: "bg-amber-50", ring: "ring-amber-100", title: "Instant Control", desc: "Update prices, items, or offers in real-time across all tables." },
     { emoji: "💰", bg: "bg-green-50", ring: "ring-green-100", title: "Zero Printing Cost", desc: "Eliminate recurring printing expenses and save ₹1,00,000+ annually." },
+    { emoji: "⚡", bg: "bg-amber-50", ring: "ring-amber-100", title: "Instant Control", desc: "Update prices, items, or offers in real-time across all tables." },
+    { emoji: "🤖", bg: "bg-red-50", ring: "ring-red-100", title: "AI Insights", desc: "Use data-driven insights to boost sales and optimize your menu strategy." },
     { emoji: "📣", bg: "bg-blue-50", ring: "ring-blue-100", title: "Smart Marketing", desc: "Share your menu on WhatsApp & Instagram to attract new customers organically." },
     { emoji: "🦠", bg: "bg-purple-50", ring: "ring-purple-100", title: "Touch-Free Dining", desc: "Provide a 100% contactless and hygienic experience via QR menus." },
     { emoji: "🌱", bg: "bg-emerald-50", ring: "ring-emerald-100", title: "Eco Impact", desc: "Go fully paperless and build a strong, eco-friendly brand image." },
