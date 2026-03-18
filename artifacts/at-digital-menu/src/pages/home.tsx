@@ -376,10 +376,19 @@ function TargetMarketSection() {
     <section className="py-24 bg-white border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
-            Built For Every F&B Establishment
+          <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase mb-4 px-4 py-1.5 rounded-full border" style={{ color: "#cc7a00", borderColor: "#cc7a00", background: "#cc7a0012" }}>
+            Who We Serve
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-5 leading-tight">
+            Built For Every{" "}
+            <span className="relative inline-block">
+              <span style={{ color: "#cc7a00" }}>F&B Establishment</span>
+              <span className="absolute -bottom-1 left-0 w-full h-[3px] rounded-full" style={{ background: "#cc7a00", opacity: 0.3 }} />
+            </span>
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">From high-end luxury dining to bustling quick-service, our platform scales to your operational needs.</p>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
+            From <span className="font-semibold text-slate-800">high-end luxury dining</span> to <span className="font-semibold text-slate-800">bustling quick-service</span>, our platform scales to your operational needs.
+          </p>
         </Reveal>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
