@@ -555,10 +555,10 @@ function PricingSection() {
 
               {/* Trust badges — side by side */}
               <div className="border-t border-slate-100 pt-8 w-full">
-                <div className="flex items-center justify-center gap-3 flex-wrap">
-                  <p className="text-slate-700 text-sm font-medium">Free onboarding &amp; setup</p>
+                <div className="flex items-center justify-center gap-2">
+                  <p className="text-slate-700 text-sm font-medium whitespace-nowrap">Free onboarding &amp; setup</p>
                   <span className="text-slate-300 text-sm">|</span>
-                  <p className="text-slate-700 text-sm font-medium">Dedicated support</p>
+                  <p className="text-slate-700 text-sm font-medium whitespace-nowrap">Dedicated support</p>
                 </div>
               </div>
             </div>
@@ -631,83 +631,136 @@ function FaqSection() {
 
 function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [countryCode, setCountryCode] = useState("+91");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 800);
+    setTimeout(() => setSubmitted(true), 800);
   };
 
-  return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1/2 bg-slate-900 z-0"></div>
-      
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white rounded-[2rem] shadow-2xl p-8 md:p-12 border border-slate-100">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
-                Ready to Transform Your Menu?
-              </h2>
-              <p className="text-lg text-slate-600 mb-8">
-                Join hundreds of restaurants already using AT Digital Menu to increase sales and elevate their dining experience.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 text-slate-700">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <Check className="h-5 w-5" />
-                  </div>
-                  <span className="font-medium">Free menu setup & ingestion</span>
-                </div>
-                <div className="flex items-center gap-4 text-slate-700">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <Check className="h-5 w-5" />
-                  </div>
-                  <span className="font-medium">14-day free trial</span>
-                </div>
-              </div>
-            </div>
+  const businessCategories = [
+    "Fine Dining Restaurants",
+    "Cafes",
+    "Bars, Pubs & Lounges",
+    "Hotels & Resorts",
+    "Cloud Kitchens",
+    "QSR & Fast Food",
+    "Bakeries & Sweets",
+    "Dhaba & Street Food",
+  ];
 
-            <div className="bg-slate-50 p-8 rounded-2xl">
-              {submitted ? (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
-                >
-                  <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Check className="h-10 w-10" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">We've received your request!</h3>
-                  <p className="text-slate-600">Our team will contact you within 24 hours to set up your free trial.</p>
-                  <Button className="mt-8" onClick={() => setSubmitted(false)} variant="outline">Send another message</Button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="text-xl font-bold text-slate-900 mb-6 font-display">Get Your Free Demo</h3>
-                  <div>
-                    <Input placeholder="Your Name" required />
-                  </div>
-                  <div>
-                    <Input placeholder="Restaurant Name" required />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <Input placeholder="Phone Number" type="tel" required />
-                    <Input placeholder="Email Address" type="email" required />
-                  </div>
-                  <Button type="submit" className="w-full mt-4">
-                    Start Free Trial
-                  </Button>
-                  <p className="text-xs text-center text-slate-500 mt-4">
-                    No credit card required. Cancel anytime.
-                  </p>
-                </form>
-              )}
+  const countryCodes = [
+    { code: "+91", flag: "🇮🇳", label: "IN" },
+    { code: "+1", flag: "🇺🇸", label: "US" },
+    { code: "+44", flag: "🇬🇧", label: "GB" },
+    { code: "+971", flag: "🇦🇪", label: "AE" },
+    { code: "+65", flag: "🇸🇬", label: "SG" },
+    { code: "+60", flag: "🇲🇾", label: "MY" },
+    { code: "+61", flag: "🇦🇺", label: "AU" },
+  ];
+
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+
+          {/* Left: Copy & trust points */}
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-5 leading-tight">
+              Ready to Transform &amp; Digitalize Your Menu?
+            </h2>
+            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+              Join hundreds of businesses using AT Digital Menu to increase sales, streamline operations, and elevate customer experience.
+            </p>
+
+            <div className="space-y-4">
+              {[
+                "100% Free Menu Setup & Onboarding",
+                "7-Day Free Trial — No Risk",
+                "Go Live in Minutes, Not Days",
+              ].map((point) => (
+                <div key={point} className="flex items-start gap-3">
+                  <span className="text-primary font-bold text-lg leading-none mt-0.5">·</span>
+                  <p className="text-slate-700 font-medium">{point}</p>
+                </div>
+              ))}
             </div>
-          </div>
+          </Reveal>
+
+          {/* Right: Form */}
+          <Reveal delay={0.2}>
+            {submitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="text-center py-16"
+              >
+                <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Check className="h-10 w-10" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">We've received your request!</h3>
+                <p className="text-slate-600 mb-8">Our team will contact you within 24 hours to set up your free trial.</p>
+                <Button onClick={() => setSubmitted(false)} variant="outline">Send another message</Button>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label>
+                  <Input placeholder="Your full name" required />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Brand / Business Name</label>
+                  <Input placeholder="Your restaurant or brand name" required />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Business Category</label>
+                  <select
+                    required
+                    defaultValue=""
+                    className="flex h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled>Select your category</option>
+                    {businessCategories.map((cat) => (
+                      <option key={cat} value={cat}>{cat}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number</label>
+                  <div className="flex gap-2">
+                    <select
+                      value={countryCode}
+                      onChange={(e) => setCountryCode(e.target.value)}
+                      className="h-12 rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 shrink-0 cursor-pointer"
+                    >
+                      {countryCodes.map(({ code, flag, label }) => (
+                        <option key={code} value={code}>{flag} {code}</option>
+                      ))}
+                    </select>
+                    <Input placeholder="Phone number" type="tel" required className="flex-1" />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                    Email Address <span className="text-slate-400 font-normal">(Optional)</span>
+                  </label>
+                  <Input placeholder="your@email.com" type="email" />
+                </div>
+
+                <Button type="submit" className="w-full text-base font-bold py-4 mt-2">
+                  Launch Your Digital Menu
+                </Button>
+                <p className="text-xs text-center text-slate-500">
+                  No credit card required. Free setup included. Cancel anytime.
+                </p>
+              </form>
+            )}
+          </Reveal>
+
         </div>
       </div>
     </section>
