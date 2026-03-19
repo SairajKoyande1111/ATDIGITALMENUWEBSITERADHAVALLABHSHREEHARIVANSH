@@ -517,13 +517,10 @@ function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full -translate-x-1/3 -translate-y-1/3 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-amber-100/40 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl pointer-events-none" />
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section id="pricing" className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight md:whitespace-nowrap">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
             One Subscription. Complete Business Control.{" "}
             <span className="text-primary">Zero Compromises.</span>
           </h2>
@@ -531,63 +528,50 @@ function PricingSection() {
 
         <Reveal>
           <div className="relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/60">
-            {/* Top gradient accent bar */}
             <div className="h-1.5 w-full bg-gradient-to-r from-primary via-amber-400 to-primary" />
 
             <div className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row md:items-stretch gap-0">
 
                 {/* Left: Plan info */}
-                <div className="md:w-72 shrink-0 md:pr-10 md:border-r md:border-slate-100 flex flex-col justify-between">
+                <div className="md:w-80 shrink-0 md:pr-12 md:border-r md:border-slate-100 flex flex-col justify-between">
                   <div>
                     <div className="inline-block bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
                       All-Inclusive Plan
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">AT Digital Menu</h3>
-                    <p className="text-slate-500 text-sm mb-8 leading-relaxed">Everything your restaurant needs to go fully digital — in one flat monthly fee.</p>
+                    <h3 className="text-3xl font-bold text-slate-900 mb-3">AT Digital Menu</h3>
+                    <p className="text-slate-500 text-base mb-8 leading-relaxed">Everything your restaurant needs to go fully digital — in one flat monthly fee.</p>
 
                     {/* Price */}
                     <div className="mb-8 bg-slate-50 rounded-2xl px-6 py-5 border border-slate-100">
                       <div className="flex items-baseline gap-1 mb-1">
-                        <span className="text-slate-500 text-base font-semibold">Rs.</span>
-                        <span className="text-6xl font-extrabold text-slate-900 tracking-tight">999</span>
-                        <span className="text-slate-400 text-base">/mo</span>
+                        <span className="text-slate-500 text-xl font-semibold">Rs.</span>
+                        <span className="text-7xl font-extrabold text-slate-900 tracking-tight">999</span>
+                        <span className="text-slate-400 text-xl">/mo</span>
                       </div>
-                      <p className="text-slate-400 text-xs mt-1">Billed monthly · Cancel anytime</p>
+                      <p className="text-slate-400 text-sm mt-1">Billed monthly · Cancel anytime</p>
                     </div>
 
-                    <Button className="w-full py-4 text-base font-bold rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 mb-3">
+                    <Button className="w-full py-4 text-lg font-bold rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 mb-3">
                       Get Started Free
                     </Button>
-                    <p className="text-center text-slate-400 text-xs mb-8">7-day free trial · No credit card required</p>
+                    <p className="text-center text-slate-400 text-sm mb-8">7-day free trial · No credit card required</p>
                   </div>
 
                   {/* Trust badges */}
-                  <div className="space-y-2.5 border-t border-slate-100 pt-6">
-                    {[
-                      { icon: "✓", text: "Free onboarding & setup" },
-                      { icon: "✓", text: "No hidden charges" },
-                      { icon: "✓", text: "Dedicated support" },
-                    ].map((t, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold shrink-0">✓</span>
-                        <p className="text-slate-600 text-sm">{t.text}</p>
-                      </div>
+                  <div className="space-y-3 border-t border-slate-100 pt-6">
+                    {["Free onboarding & setup", "No hidden charges", "Dedicated support"].map((t, i) => (
+                      <p key={i} className="text-slate-600 text-base">{t}</p>
                     ))}
                   </div>
                 </div>
 
                 {/* Right: Features grid */}
-                <div className="flex-1 md:pl-10 mt-8 md:mt-0">
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Everything Included</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5">
+                <div className="flex-1 md:pl-12 mt-8 md:mt-0">
+                  <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Everything Included</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                     {features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-3 group">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors duration-200">
-                          <Check className="h-3 w-3 text-primary group-hover:text-white transition-colors duration-200" />
-                        </span>
-                        <span className="text-slate-700 text-sm">{feature}</span>
-                      </div>
+                      <p key={i} className="text-slate-700 text-base">{feature}</p>
                     ))}
                   </div>
                 </div>
