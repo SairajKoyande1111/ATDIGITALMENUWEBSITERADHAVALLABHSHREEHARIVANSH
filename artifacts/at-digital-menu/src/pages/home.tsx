@@ -416,25 +416,24 @@ function ValueSection() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
-            Smarter Operations. Higher Revenue.{" "}
-            <span className="text-primary">Stronger Business</span>
+        <Reveal className="text-center mx-auto mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight md:whitespace-nowrap">
+            Smarter <span className="text-primary">Operations.</span> Higher <span className="text-primary">Revenue.</span> Stronger <span className="text-primary">Business</span>
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {values.map((val, i) => (
             <Reveal key={i} delay={i * 0.07}>
               <div className="group flex flex-col items-center text-center">
                 <img
                   src={val.img}
                   alt={val.title}
-                  className="w-28 h-28 object-contain mb-5 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
+                  className="w-36 h-36 object-contain mb-5 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                 />
-                <h3 className="text-base font-bold text-slate-900 font-display mb-2">{val.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{val.line1}</p>
-                <p className="text-sm text-slate-500 leading-relaxed">{val.line2}</p>
+                <h3 className="text-base font-semibold text-slate-900 mb-2">{val.title}</h3>
+                <p className="text-sm text-slate-900 leading-relaxed">{val.line1}</p>
+                <p className="text-sm text-slate-900 leading-relaxed">{val.line2}</p>
               </div>
             </Reveal>
           ))}
