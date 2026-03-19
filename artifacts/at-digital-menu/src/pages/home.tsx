@@ -530,16 +530,16 @@ function PricingSection() {
           <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-16">
 
             {/* Left: Plan info */}
-            <div className="md:w-72 shrink-0 flex flex-col">
+            <div className="md:w-72 shrink-0 flex flex-col items-center md:items-start">
               {/* Logo */}
               <img
                 src={`${import.meta.env.BASE_URL}images/logo.png`}
                 alt="AT Digital Menu"
-                className="h-20 w-auto object-contain mb-8 self-start"
+                className="h-20 w-auto object-contain mb-8"
               />
 
               {/* Pricing */}
-              <div className="flex flex-col gap-2 mb-8">
+              <div className="flex flex-col gap-2 mb-8 items-center md:items-start">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-bold text-slate-900">₹</span>
                   <span className="text-6xl font-bold text-slate-900 tracking-tight">999</span>
@@ -553,11 +553,11 @@ function PricingSection() {
               </Button>
               <p className="text-center text-slate-900 text-sm mb-10">7-day free trial · No credit card required</p>
 
-              {/* Trust badges — horizontal */}
-              <div className="flex flex-row flex-wrap gap-x-6 gap-y-2 border-t border-slate-100 pt-8">
-                <p className="text-slate-700 text-sm font-medium">Free onboarding &amp; setup</p>
-                <p className="text-slate-700 text-sm font-medium">No hidden charges</p>
-                <p className="text-slate-700 text-sm font-medium">Dedicated support</p>
+              {/* Trust badges — vertical */}
+              <div className="flex flex-col gap-3 border-t border-slate-100 pt-8 w-full">
+                <p className="text-slate-700 text-sm font-medium text-center md:text-left">Free onboarding &amp; setup</p>
+                <p className="text-slate-700 text-sm font-medium text-center md:text-left">No hidden charges</p>
+                <p className="text-slate-700 text-sm font-medium text-center md:text-left">Dedicated support</p>
               </div>
             </div>
 
@@ -566,8 +566,8 @@ function PricingSection() {
 
             {/* Right: Features grid */}
             <div className="flex-1">
-              <p className="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">Everything Included in one plan</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+              <p className="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6 text-center">Everything Included in one plan</p>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                 {features.map((feature, i) => (
                   <p key={i} className="text-slate-700 text-base">{feature}</p>
                 ))}
