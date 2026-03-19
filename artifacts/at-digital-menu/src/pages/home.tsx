@@ -232,13 +232,13 @@ function ProblemSection() {
           </h2>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {problems.map((prob, i) => (
             <Reveal key={i} delay={i * 0.07}>
-              <div className="h-full">
-                <div className="text-4xl mb-4">{prob.emoji}</div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3 font-display">{prob.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{prob.desc}</p>
+              <div className="group flex flex-col items-center text-center">
+                <div className="text-5xl mb-5">{prob.emoji}</div>
+                <h3 className="text-base font-semibold text-slate-900 mb-2">{prob.title}</h3>
+                <p className="text-sm text-slate-900 leading-relaxed text-center">{prob.desc}</p>
               </div>
             </Reveal>
           ))}
