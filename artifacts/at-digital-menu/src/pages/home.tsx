@@ -323,10 +323,9 @@ function FeaturesSection() {
     <section id="features" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
-            Everything Your Menu <span className="text-primary">Should Be</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            Smart Menus Built with <span className="text-primary">Smart Features</span>
           </h2>
-          <p className="text-lg text-slate-600">Packed with enterprise features, designed for simplicity.</p>
         </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -350,7 +349,7 @@ function FeaturesSection() {
                     </div>
                   )}
                 </div>
-                <h3 className="text-base font-bold text-slate-900 font-display leading-snug">{feature.title}</h3>
+                <h3 className="text-base font-semibold text-slate-900 leading-snug">{feature.title}</h3>
               </div>
             </Reveal>
           ))}
@@ -380,9 +379,6 @@ function TargetMarketSection() {
             Designed for Every{" "}
             <span style={{ color: "#cc7a00" }}>Food & Beverage</span> Business
           </h2>
-          <p className="text-slate-900 max-w-2xl mx-auto text-lg leading-relaxed">
-            From Fine Dining to Fast Paced Service, Our Platform Adapts Effortlessly to your Operational Needs
-          </p>
         </Reveal>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
