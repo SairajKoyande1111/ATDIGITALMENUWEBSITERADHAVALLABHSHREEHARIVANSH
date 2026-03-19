@@ -855,21 +855,21 @@ function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-200 text-sm text-slate-900">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-2 mb-2">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <p>© {new Date().getFullYear()} AT Digital Menu. All Rights Reserved.</p>
+            <p>
+              Product developed by{" "}
+              <a
+                href="https://airavatatechnologies.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary hover:underline"
+              >
+                AIRAVATA TECHNOLOGIES
+              </a>
+            </p>
             <p>Designed with 💛 for the F&B Industry</p>
           </div>
-          <p className="text-center">
-            Product developed by{" "}
-            <a
-              href="https://airavatatechnologies.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-primary hover:underline"
-            >
-              AIRAVATA TECHNOLOGIES
-            </a>
-          </p>
         </div>
       </div>
     </footer>
@@ -888,9 +888,7 @@ export default function Home() {
         <FeaturesSection />
         <TargetMarketSection />
         <ValueSection />
-        <TestimonialsSection />
         <PricingSection />
-        <FaqSection />
         <ContactSection />
       </main>
       <Footer />
