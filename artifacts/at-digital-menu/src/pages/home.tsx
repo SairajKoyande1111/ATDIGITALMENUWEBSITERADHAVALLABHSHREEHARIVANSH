@@ -530,7 +530,7 @@ function PricingSection() {
           <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-16">
 
             {/* Left: Plan info */}
-            <div className="md:w-72 shrink-0 flex flex-col items-center md:items-start">
+            <div className="md:w-72 shrink-0 flex flex-col items-center">
               {/* Logo */}
               <img
                 src={`${import.meta.env.BASE_URL}images/logo.png`}
@@ -539,7 +539,7 @@ function PricingSection() {
               />
 
               {/* Pricing */}
-              <div className="flex flex-col gap-2 mb-8 items-center md:items-start">
+              <div className="flex flex-col gap-2 mb-8 items-center">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-bold text-slate-900">₹</span>
                   <span className="text-6xl font-bold text-slate-900 tracking-tight">999</span>
@@ -553,24 +553,44 @@ function PricingSection() {
               </Button>
               <p className="text-center text-slate-900 text-sm mb-10">7-day free trial · No credit card required</p>
 
-              {/* Trust badges — vertical */}
-              <div className="flex flex-col gap-3 border-t border-slate-100 pt-8 w-full">
-                <p className="text-slate-700 text-sm font-medium text-center md:text-left">Free onboarding &amp; setup</p>
-                <p className="text-slate-700 text-sm font-medium text-center md:text-left">No hidden charges</p>
-                <p className="text-slate-700 text-sm font-medium text-center md:text-left">Dedicated support</p>
+              {/* Trust badges — side by side */}
+              <div className="border-t border-slate-100 pt-8 w-full">
+                <div className="flex items-center justify-center gap-3 flex-wrap">
+                  <p className="text-slate-700 text-sm font-medium">Free onboarding &amp; setup</p>
+                  <span className="text-slate-300 text-sm">|</span>
+                  <p className="text-slate-700 text-sm font-medium">Dedicated support</p>
+                </div>
               </div>
             </div>
 
-            {/* Divider */}
+            {/* Divider between left plan info and features */}
             <div className="hidden md:block w-px bg-slate-100 self-stretch" />
 
-            {/* Right: Features grid */}
+            {/* Right: Features */}
             <div className="flex-1">
-              <p className="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6 text-center">Everything Included in one plan</p>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                {features.map((feature, i) => (
-                  <p key={i} className="text-slate-700 text-base">{feature}</p>
-                ))}
+              <p className="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6 text-center w-full">Everything Included in one plan</p>
+              {/* Two feature columns with a thin line divider between them */}
+              <div className="flex gap-0">
+                {/* Left feature column */}
+                <div className="flex-1 flex flex-col gap-3 pr-6">
+                  {features.slice(0, Math.ceil(features.length / 2)).map((feature, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-primary font-bold mt-0.5 leading-none">·</span>
+                      <p className="text-slate-700 text-base leading-snug">{feature}</p>
+                    </div>
+                  ))}
+                </div>
+                {/* Thin divider */}
+                <div className="w-px bg-slate-200 self-stretch shrink-0" />
+                {/* Right feature column */}
+                <div className="flex-1 flex flex-col gap-3 pl-6">
+                  {features.slice(Math.ceil(features.length / 2)).map((feature, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-primary font-bold mt-0.5 leading-none">·</span>
+                      <p className="text-slate-700 text-base leading-snug">{feature}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
