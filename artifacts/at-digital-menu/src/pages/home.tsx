@@ -527,54 +527,55 @@ function PricingSection() {
         </Reveal>
 
         <Reveal>
-          <div className="relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/60">
-            <div className="h-1.5 w-full bg-gradient-to-r from-primary via-amber-400 to-primary" />
+          <div className="flex flex-col md:flex-row md:items-start gap-12 md:gap-16">
 
-            <div className="p-8 md:p-12">
-              <div className="flex flex-col md:flex-row md:items-stretch gap-0">
+            {/* Left: Plan info */}
+            <div className="md:w-72 shrink-0 flex flex-col">
+              {/* Logo */}
+              <img
+                src={`${import.meta.env.BASE_URL}images/logo.png`}
+                alt="AT Digital Menu"
+                className="h-20 w-auto object-contain mb-8 self-start"
+              />
 
-                {/* Left: Plan info */}
-                <div className="md:w-80 shrink-0 md:pr-12 md:border-r md:border-slate-100 flex flex-col justify-between">
-                  <div>
-                    <div className="inline-block bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-                      All-Inclusive Plan
-                    </div>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-3">AT Digital Menu</h3>
-                    <p className="text-slate-500 text-base mb-8 leading-relaxed">Everything your restaurant needs to go fully digital — in one flat monthly fee.</p>
-
-                    {/* Price */}
-                    <div className="mb-8 bg-slate-50 rounded-2xl px-6 py-5 border border-slate-100">
-                      <div className="flex items-baseline gap-1 mb-1">
-                        <span className="text-slate-500 text-xl font-semibold">Rs.</span>
-                        <span className="text-7xl font-extrabold text-slate-900 tracking-tight">999</span>
-                        <span className="text-slate-400 text-xl">/mo</span>
-                      </div>
-                      <p className="text-slate-400 text-sm mt-1">Billed monthly · Cancel anytime</p>
-                    </div>
-
-                    <Button className="w-full py-4 text-lg font-bold rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 mb-3">
-                      Get Started Free
-                    </Button>
-                    <p className="text-center text-slate-400 text-sm mb-8">7-day free trial · No credit card required</p>
-                  </div>
-
-                  {/* Trust badges */}
-                  <div className="space-y-3 border-t border-slate-100 pt-6">
-                    {["Free onboarding & setup", "No hidden charges", "Dedicated support"].map((t, i) => (
-                      <p key={i} className="text-slate-600 text-base">{t}</p>
-                    ))}
-                  </div>
+              {/* Dual pricing */}
+              <div className="flex flex-col gap-4 mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-slate-500">₹</span>
+                  <span className="text-6xl font-bold text-slate-900 tracking-tight">999</span>
+                  <span className="text-slate-400 text-lg">/mo</span>
                 </div>
-
-                {/* Right: Features grid */}
-                <div className="flex-1 md:pl-12 mt-8 md:mt-0">
-                  <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Everything Included</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                    {features.map((feature, i) => (
-                      <p key={i} className="text-slate-700 text-base">{feature}</p>
-                    ))}
-                  </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-slate-500">$</span>
+                  <span className="text-6xl font-bold text-slate-900 tracking-tight">10</span>
+                  <span className="text-slate-400 text-lg">/mo</span>
                 </div>
+                <p className="text-slate-400 text-sm">Billed monthly · Cancel anytime</p>
+              </div>
+
+              <Button className="w-full py-4 text-lg font-bold rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 mb-3">
+                Get Started Free
+              </Button>
+              <p className="text-center text-slate-400 text-sm mb-10">7-day free trial · No credit card required</p>
+
+              {/* Trust badges — vertical */}
+              <div className="flex flex-col gap-4 border-t border-slate-100 pt-8">
+                <p className="text-slate-700 text-base font-medium">Free onboarding &amp; setup</p>
+                <p className="text-slate-700 text-base font-medium">No hidden charges</p>
+                <p className="text-slate-700 text-base font-medium">Dedicated support</p>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden md:block w-px bg-slate-100 self-stretch" />
+
+            {/* Right: Features grid */}
+            <div className="flex-1">
+              <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Everything Included</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                {features.map((feature, i) => (
+                  <p key={i} className="text-slate-700 text-base">{feature}</p>
+                ))}
               </div>
             </div>
           </div>
