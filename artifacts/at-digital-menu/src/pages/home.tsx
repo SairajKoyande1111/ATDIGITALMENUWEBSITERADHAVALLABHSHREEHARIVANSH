@@ -184,74 +184,42 @@ function ProblemSection() {
     {
       emoji: "💰",
       title: "High Operational Costs",
-      points: [
-        "Frequent reprints and design changes increase expenses.",
-        "₹1,00,000+ wasted yearly on updates.",
-        "Unnecessary spending reduces overall profitability.",
-      ],
+      desc: "Reprints and design updates silently drain ₹1L+ a year. Every change costs money you shouldn't be spending.",
     },
     {
       emoji: "⚡",
       title: "No Real-Time Control",
-      points: [
-        "Menu updates take hours or days to reflect.",
-        "Items stay listed even when unavailable.",
-        "You lose control over real-time business operations.",
-      ],
+      desc: "Sold out? Too bad — your menu doesn't know that yet. Updates lag by hours while customers stay confused.",
     },
     {
       emoji: "📉",
-      title: "Missed Revenue Opportunities",
-      points: [
-        "No upselling, combos, or smart suggestions.",
-        "Customers see static options with no guidance.",
-        "You miss chances to increase order value.",
-      ],
+      title: "Missed Revenue",
+      desc: "No combos. No suggestions. No upsells. Customers order less because your menu never asks for more.",
     },
     {
       emoji: "📣",
-      title: "Zero Marketing & Reach",
-      points: [
-        "Menus cannot be shared or promoted online.",
-        "No visibility on WhatsApp or Instagram.",
-        "Your reach stays limited to in-house customers.",
-      ],
+      title: "Zero Marketing Reach",
+      desc: "A menu that can't be shared is invisible. No WhatsApp. No Instagram. No reach beyond your four walls.",
     },
     {
       emoji: "👤",
       title: "No Customer Insights",
-      points: [
-        "No data, no tracking, no retention.",
-        "Customer preferences remain unknown.",
-        "Business decisions rely purely on guesswork.",
-      ],
+      desc: "You don't know who's coming back or why. Every business decision is a guess.",
     },
     {
       emoji: "🎨",
-      title: "Poor Customer Experience",
-      points: [
-        "Static design with limited visuals and engagement.",
-        "No personalization or dynamic content.",
-        "Fails to impress modern digital-first customers.",
-      ],
+      title: "Poor Experience",
+      desc: "Static, text-heavy menus don't impress. Today's customers expect something that looks as good as the food.",
     },
     {
       emoji: "🔄",
       title: "Inefficient Operations",
-      points: [
-        "Constant staff dependency for explanations.",
-        "Outdated menus create confusion and errors.",
-        "Slows service and increases operational load.",
-      ],
+      desc: "Your staff explains what the menu should. Outdated info creates confusion, slows service, and piles on errors.",
     },
     {
       emoji: "🌱",
-      title: "Limited Scalability & Impact",
-      points: [
-        "Difficult to manage multiple outlets consistently.",
-        "Menus generate continuous paper waste.",
-        "Restricts growth and harms brand perception.",
-      ],
+      title: "Limited Scalability",
+      desc: "Hard to stay consistent across outlets. Paper menus pile up, wear out, and quietly hurt your brand.",
     },
   ];
 
@@ -270,11 +238,7 @@ function ProblemSection() {
               <div className="h-full">
                 <div className="text-4xl mb-4">{prob.emoji}</div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3 font-display">{prob.title}</h3>
-                <ul className="space-y-1.5">
-                  {prob.points.map((point, j) => (
-                    <li key={j} className="text-slate-600 text-sm leading-relaxed">{point}</li>
-                  ))}
-                </ul>
+                <p className="text-slate-600 text-sm leading-relaxed">{prob.desc}</p>
               </div>
             </Reveal>
           ))}
