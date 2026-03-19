@@ -181,33 +181,100 @@ function HeroSection() {
 
 function ProblemSection() {
   const problems = [
-    { icon: Receipt, title: "Exorbitant Reprint Costs", desc: "Rs.5,000–Rs.25,000 per reprint. Over Rs.1,00,000 wasted annually just to update prices." },
-    { icon: Clock, title: "Zero Real-Time Updates", desc: "Waiting 24-48 hours for a designer and printer means you can't react to inventory changes." },
-    { icon: Bug, title: "Significant Hygiene Risk", desc: "Physical menus are handled by hundreds daily, often carrying more bacteria than public surfaces." },
-    { icon: Megaphone, title: "Zero Marketing Value", desc: "A physical book cannot be shared on WhatsApp, posted to Instagram, or reach new customers." },
-    { icon: UserX, title: "Anonymous Customers", desc: "Every guest walks in and out. You collect zero data, names, or contact info for retention." },
-    { icon: Trash2, title: "Environmental Waste", desc: "Billions of paper menus are printed globally every year, with over 80% ending up in landfills." },
+    {
+      emoji: "💰",
+      title: "High Operational Costs",
+      points: [
+        "Frequent reprints and design changes increase expenses.",
+        "₹1,00,000+ wasted yearly on updates.",
+        "Unnecessary spending reduces overall profitability.",
+      ],
+    },
+    {
+      emoji: "⚡",
+      title: "No Real-Time Control",
+      points: [
+        "Menu updates take hours or days to reflect.",
+        "Items stay listed even when unavailable.",
+        "You lose control over real-time business operations.",
+      ],
+    },
+    {
+      emoji: "📉",
+      title: "Missed Revenue Opportunities",
+      points: [
+        "No upselling, combos, or smart suggestions.",
+        "Customers see static options with no guidance.",
+        "You miss chances to increase order value.",
+      ],
+    },
+    {
+      emoji: "📣",
+      title: "Zero Marketing & Reach",
+      points: [
+        "Menus cannot be shared or promoted online.",
+        "No visibility on WhatsApp or Instagram.",
+        "Your reach stays limited to in-house customers.",
+      ],
+    },
+    {
+      emoji: "👤",
+      title: "No Customer Insights",
+      points: [
+        "No data, no tracking, no retention.",
+        "Customer preferences remain unknown.",
+        "Business decisions rely purely on guesswork.",
+      ],
+    },
+    {
+      emoji: "🎨",
+      title: "Poor Customer Experience",
+      points: [
+        "Static design with limited visuals and engagement.",
+        "No personalization or dynamic content.",
+        "Fails to impress modern digital-first customers.",
+      ],
+    },
+    {
+      emoji: "🔄",
+      title: "Inefficient Operations",
+      points: [
+        "Constant staff dependency for explanations.",
+        "Outdated menus create confusion and errors.",
+        "Slows service and increases operational load.",
+      ],
+    },
+    {
+      emoji: "🌱",
+      title: "Limited Scalability & Impact",
+      points: [
+        "Difficult to manage multiple outlets consistently.",
+        "Menus generate continuous paper waste.",
+        "Restricts growth and harms brand perception.",
+      ],
+    },
   ];
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
             Physical Menus Are Costing You <span className="text-primary">More Than You Think</span>
           </h2>
-          <p className="text-lg text-slate-600">The traditional paper menu is a static, expensive bottleneck in a fast-moving industry.</p>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
           {problems.map((prob, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <div className="bg-white p-8 rounded-3xl card-hover h-full">
-                <div className="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6">
-                  <prob.icon className="h-7 w-7" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 font-display">{prob.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{prob.desc}</p>
+            <Reveal key={i} delay={i * 0.07}>
+              <div className="h-full">
+                <div className="text-4xl mb-4">{prob.emoji}</div>
+                <h3 className="text-lg font-bold text-slate-900 mb-3 font-display">{prob.title}</h3>
+                <ul className="space-y-1.5">
+                  {prob.points.map((point, j) => (
+                    <li key={j} className="text-slate-600 text-sm leading-relaxed">{point}</li>
+                  ))}
+                </ul>
               </div>
             </Reveal>
           ))}
@@ -858,7 +925,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
             <p>© {new Date().getFullYear()} AT Digital Menu. All Rights Reserved.</p>
             <p>
-              Product developed by{" "}
+              Product by{" "}
               <a
                 href="https://airavatatechnologies.com/"
                 target="_blank"
