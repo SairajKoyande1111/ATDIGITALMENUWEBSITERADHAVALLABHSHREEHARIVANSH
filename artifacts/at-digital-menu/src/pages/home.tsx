@@ -180,29 +180,30 @@ function HeroSection() {
 }
 
 function ProblemSection() {
+  const BASE = import.meta.env.BASE_URL;
   const problems = [
     {
-      emoji: "💰",
+      img: `${BASE}images/prob-high-cost.png`,
       title: "High Operational Costs",
       desc: "Reprints and design updates silently drain ₹1L+ a year. Every change costs money you shouldn't be spending.",
     },
     {
-      emoji: "⚡",
+      img: `${BASE}images/prob-no-realtime.png`,
       title: "No Real-Time Control",
       desc: "Sold out? Too bad — your menu doesn't know that yet. Updates lag by hours while customers stay confused.",
     },
     {
-      emoji: "📉",
+      img: `${BASE}images/prob-missed-revenue.png`,
       title: "Missed Revenue",
       desc: "No combos. No suggestions. No upsells. Customers order less because your menu never asks for more.",
     },
     {
-      emoji: "📣",
+      img: `${BASE}images/prob-zero-marketing.png`,
       title: "Zero Marketing Reach",
       desc: "A menu that can't be shared is invisible. No WhatsApp. No Instagram. No reach beyond your four walls.",
     },
     {
-      emoji: "👤",
+      img: `${BASE}images/prob-no-insights.png`,
       title: "No Customer Insights",
       desc: "No order history. No preferences. No idea who your best customers are. You can't grow what you can't measure.",
     },
@@ -236,7 +237,11 @@ function ProblemSection() {
           {problems.map((prob, i) => (
             <Reveal key={i} delay={i * 0.07}>
               <div className="group flex flex-col items-center text-center">
-                <div className="text-5xl mb-5">{prob.emoji}</div>
+                {prob.img ? (
+                  <img src={prob.img} alt={prob.title} className="w-36 h-36 object-contain mb-5 group-hover:scale-110 transition-transform duration-300" style={{ mixBlendMode: "multiply" }} />
+                ) : (
+                  <div className="text-5xl mb-5">{prob.emoji}</div>
+                )}
                 <h3 className="text-base font-semibold text-slate-900 mb-2">{prob.title}</h3>
                 <p className="text-sm text-slate-900 leading-relaxed text-center">{prob.desc}</p>
               </div>
