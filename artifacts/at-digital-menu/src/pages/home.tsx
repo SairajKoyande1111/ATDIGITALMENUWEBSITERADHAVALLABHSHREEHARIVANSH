@@ -328,10 +328,10 @@ function FeaturesSection() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {features.map((feature, i) => (
             <Reveal key={i} delay={i * 0.05}>
-              <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-3 group cursor-pointer">
+              <div className={`flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-3 group cursor-pointer px-4 py-4 xl:py-3 xl:border-r xl:border-slate-100${(i + 1) % 4 === 0 ? ' xl:border-r-0' : ''}`}>
                 <div className="shrink-0">
                   {feature.img ? (
                     <img
@@ -403,25 +403,24 @@ function TargetMarketSection() {
 function ValueSection() {
   const BASE = import.meta.env.BASE_URL;
   const values = [
-    { img: `${BASE}images/adv-zero-printing.png`, title: "Zero Printing Cost", desc: "Eliminate recurring printing expenses and save ₹1,00,000+ annually." },
-    { img: `${BASE}images/adv-instant-control.png`, title: "Instant Control", desc: "Update prices, items, or offers in real-time across all tables." },
-    { img: `${BASE}images/adv-ai-insights.png`, title: "AI Insights", desc: "Use data-driven insights to boost sales and optimize your menu strategy." },
-    { img: `${BASE}images/adv-smart-marketing.png`, title: "Smart Marketing", desc: "Share your menu on WhatsApp & Instagram to attract new customers organically." },
-    { img: `${BASE}images/adv-touch-free.png`, title: "Touch-Free Dining", desc: "Provide a 100% contactless and hygienic experience via QR menus." },
-    { img: `${BASE}images/adv-eco-impact.png`, title: "Eco Impact", desc: "Go fully paperless and build a strong, eco-friendly brand image." },
-    { img: `${BASE}images/adv-high-engagement.png`, title: "High Engagement", desc: "Use images, videos, and offers to increase customer interest and conversions." },
-    { img: `${BASE}images/adv-smart-intelligence.png`, title: "Smart Intelligence", desc: "Track customer behavior, preferences, and ordering patterns effortlessly." },
+    { img: `${BASE}images/adv-zero-printing.png`, title: "Zero Printing Cost", line1: "Cut recurring printing expenses completely.", line2: "Save ₹1,00,000+ every year effortlessly." },
+    { img: `${BASE}images/adv-instant-control.png`, title: "Instant Control", line1: "Update prices, items, and offers instantly.", line2: "Stay in control across all tables, in real-time." },
+    { img: `${BASE}images/adv-ai-insights.png`, title: "AI Insights", line1: "Turn data into powerful business decisions.", line2: "Boost sales with smart, actionable insights." },
+    { img: `${BASE}images/adv-smart-marketing.png`, title: "Smart Marketing", line1: "Promote your menu where your customers are.", line2: "Drive organic traffic via WhatsApp & Instagram." },
+    { img: `${BASE}images/adv-touch-free.png`, title: "Touch-Free Dining", line1: "Deliver a safe, contactless dining experience.", line2: "Enable seamless access with QR-based menus." },
+    { img: `${BASE}images/adv-eco-impact.png`, title: "Eco Impact", line1: "Eliminate paper usage completely.", line2: "Build a sustainable and eco-conscious brand image." },
+    { img: `${BASE}images/adv-high-engagement.png`, title: "High Engagement", line1: "Capture attention with rich visuals and offers.", line2: "Increase conversions with interactive experiences." },
+    { img: `${BASE}images/adv-smart-intelligence.png`, title: "Smart Intelligence", line1: "Understand customer behavior like never before.", line2: "Track preferences and optimize every interaction." },
   ];
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide">Why Choose Us</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4">
-            The AT Digital Menu <span className="text-primary">Advantage</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
+            Smarter Operations. Higher Revenue.{" "}
+            <span className="text-primary">Stronger Business</span>
           </h2>
-          <p className="text-lg text-slate-500">Every feature is designed to save you money, time, and effort.</p>
         </Reveal>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
@@ -433,8 +432,9 @@ function ValueSection() {
                   alt={val.title}
                   className="w-28 h-28 object-contain mb-5 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                 />
-                <h3 className="text-base font-bold text-slate-900 font-display mb-1.5">{val.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{val.desc}</p>
+                <h3 className="text-base font-bold text-slate-900 font-display mb-2">{val.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{val.line1}</p>
+                <p className="text-sm text-slate-500 leading-relaxed">{val.line2}</p>
               </div>
             </Reveal>
           ))}
