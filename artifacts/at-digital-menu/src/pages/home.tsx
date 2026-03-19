@@ -538,31 +538,26 @@ function PricingSection() {
                 className="h-20 w-auto object-contain mb-8 self-start"
               />
 
-              {/* Dual pricing */}
-              <div className="flex flex-col gap-4 mb-8">
+              {/* Pricing */}
+              <div className="flex flex-col gap-2 mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-slate-500">₹</span>
+                  <span className="text-3xl font-bold text-slate-900">₹</span>
                   <span className="text-6xl font-bold text-slate-900 tracking-tight">999</span>
-                  <span className="text-slate-400 text-lg">/mo</span>
+                  <span className="text-slate-900 text-lg font-medium">/ Month</span>
                 </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-slate-500">$</span>
-                  <span className="text-6xl font-bold text-slate-900 tracking-tight">10</span>
-                  <span className="text-slate-400 text-lg">/mo</span>
-                </div>
-                <p className="text-slate-400 text-sm">Billed monthly · Cancel anytime</p>
+                <p className="text-slate-900 text-sm">Billed monthly · Cancel anytime</p>
               </div>
 
               <Button className="w-full py-4 text-lg font-bold rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 mb-3">
                 Get Started Free
               </Button>
-              <p className="text-center text-slate-400 text-sm mb-10">7-day free trial · No credit card required</p>
+              <p className="text-center text-slate-900 text-sm mb-10">7-day free trial · No credit card required</p>
 
-              {/* Trust badges — vertical */}
-              <div className="flex flex-col gap-4 border-t border-slate-100 pt-8">
-                <p className="text-slate-700 text-base font-medium">Free onboarding &amp; setup</p>
-                <p className="text-slate-700 text-base font-medium">No hidden charges</p>
-                <p className="text-slate-700 text-base font-medium">Dedicated support</p>
+              {/* Trust badges — horizontal */}
+              <div className="flex flex-row flex-wrap gap-x-6 gap-y-2 border-t border-slate-100 pt-8">
+                <p className="text-slate-700 text-sm font-medium">Free onboarding &amp; setup</p>
+                <p className="text-slate-700 text-sm font-medium">No hidden charges</p>
+                <p className="text-slate-700 text-sm font-medium">Dedicated support</p>
               </div>
             </div>
 
@@ -571,7 +566,7 @@ function PricingSection() {
 
             {/* Right: Features grid */}
             <div className="flex-1">
-              <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Everything Included</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-slate-900 mb-6">Everything Included in one plan</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                 {features.map((feature, i) => (
                   <p key={i} className="text-slate-700 text-base">{feature}</p>
@@ -581,12 +576,6 @@ function PricingSection() {
           </div>
         </Reveal>
 
-        <Reveal className="text-center mt-10">
-          <p className="text-slate-500 text-sm">
-            Need a custom solution for multiple outlets?{" "}
-            <a href="#contact" className="text-primary font-semibold hover:underline">Talk to us →</a>
-          </p>
-        </Reveal>
       </div>
     </section>
   );
