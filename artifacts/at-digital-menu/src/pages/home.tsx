@@ -788,16 +788,13 @@ function Footer() {
     { name: "Why AT Digital Menu", href: "#" },
     { name: "Features", href: "#features" },
     { name: "For", href: "#" },
-    { name: "Advantage", href: "#" },
     { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
   ];
   const companyLinks = [
     { name: "About Us", href: "#" },
     { name: "Terms & Conditions", href: "#" },
     { name: "Privacy Policy", href: "#" },
     { name: "Refunds & Cancellations", href: "#" },
-    { name: "Contact", href: "#contact" },
   ];
   const socials = [
     { img: `${BASE}images/instagram.png`, label: "Instagram" },
@@ -820,7 +817,7 @@ function Footer() {
                 className="h-16 w-auto object-contain"
               />
             </Link>
-            <p className="text-slate-500 max-w-sm leading-relaxed mb-6">
+            <p className="text-slate-900 max-w-sm leading-relaxed mb-6">
               We transform traditional menus into powerful digital platforms that drive business growth, boost marketing reach, and elevate every customer experience.
             </p>
             <div className="flex items-center gap-3">
@@ -838,7 +835,7 @@ function Footer() {
             <ul className="space-y-3">
               {quickLinks.map(({ name, href }) => (
                 <li key={name}>
-                  <a href={href} className="text-slate-500 hover:text-primary transition-colors text-sm">{name}</a>
+                  <a href={href} className="text-slate-900 hover:text-primary transition-colors text-sm">{name}</a>
                 </li>
               ))}
             </ul>
@@ -850,16 +847,20 @@ function Footer() {
             <ul className="space-y-3">
               {companyLinks.map(({ name, href }) => (
                 <li key={name}>
-                  <a href={href} className="text-slate-500 hover:text-primary transition-colors text-sm">{name}</a>
+                  <a href={href} className="text-slate-900 hover:text-primary transition-colors text-sm">{name}</a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-slate-500">
-          <p>
-            © {new Date().getFullYear()} AT Digital Menu. All Rights Reserved. Product developed by{" "}
+        <div className="pt-8 border-t border-slate-200 text-sm text-slate-900">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 mb-2">
+            <p>© {new Date().getFullYear()} AT Digital Menu. All Rights Reserved.</p>
+            <p>Designed with 💛 for the F&B Industry</p>
+          </div>
+          <p className="text-center">
+            Product developed by{" "}
             <a
               href="https://airavatatechnologies.com/"
               target="_blank"
@@ -869,7 +870,6 @@ function Footer() {
               AIRAVATA TECHNOLOGIES
             </a>
           </p>
-          <p>Designed with 💛 for the F&B Industry</p>
         </div>
       </div>
     </footer>
