@@ -656,15 +656,15 @@ function ContactSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight">
-            Ready to Grow? <span className="text-primary">Your Smarter Menu Starts Here</span>
+            Ready to Grow? <span className="text-primary">Your Smarter Menu </span><span className="text-slate-900">Starts Here</span>
           </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
-          {/* Left: Copy & trust points */}
-          <Reveal>
+          {/* Left: Copy & trust points — shown below form on mobile */}
+          <Reveal className="order-2 md:order-1">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-5 leading-tight">
-              Ready to Transform &amp; Digitalize Your Menu?
+              Transform &amp; Digitalize Your Menu
             </h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed">
               Join hundreds of businesses using AT Digital Menu to increase sales, streamline operations, and elevate customer experience.
@@ -705,8 +705,8 @@ function ContactSection() {
             </div>
           </Reveal>
 
-          {/* Right: Form */}
-          <Reveal delay={0.2}>
+          {/* Right: Form — shown first on mobile */}
+          <Reveal delay={0.2} className="order-1 md:order-2">
             {submitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -781,58 +781,95 @@ function ContactSection() {
 }
 
 function Footer() {
+  const BASE = import.meta.env.BASE_URL;
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "Live Demo", href: "#" },
+    { name: "Why AT Digital Menu", href: "#" },
+    { name: "Features", href: "#features" },
+    { name: "For", href: "#" },
+    { name: "Advantage", href: "#" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Contact", href: "#contact" },
+  ];
+  const companyLinks = [
+    { name: "About Us", href: "#" },
+    { name: "Terms & Conditions", href: "#" },
+    { name: "Privacy Policy", href: "#" },
+    { name: "Refunds & Cancellations", href: "#" },
+    { name: "Contact", href: "#contact" },
+  ];
+  const socials = [
+    { img: `${BASE}images/instagram.png`, label: "Instagram" },
+    { img: `${BASE}images/facebook.png`, label: "Facebook" },
+    { img: `${BASE}images/youtube.png`, label: "YouTube" },
+    { img: `${BASE}images/linkedin.png`, label: "LinkedIn" },
+  ];
+
   return (
-    <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
+    <footer className="bg-white text-slate-600 py-16 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
+
+          {/* Brand column */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="h-10 w-10 bg-primary rounded-xl flex items-center justify-center text-white font-display font-bold text-xl">
-                AT
-              </div>
-              <span className="font-display font-bold text-2xl text-white">Digital Menu</span>
+            <Link href="/" className="inline-block mb-6">
+              <img
+                src={`${BASE}images/logo.png`}
+                alt="AT Digital Menu"
+                className="h-16 w-auto object-contain"
+              />
             </Link>
-            <p className="text-slate-400 max-w-sm leading-relaxed mb-6">
-              Empowering Every Restaurant With Smarter Menus. We build technology that helps F&B businesses reduce costs, increase sales, and delight their guests.
+            <p className="text-slate-500 max-w-sm leading-relaxed mb-6">
+              We transform traditional menus into powerful digital platforms that drive business growth, boost marketing reach, and elevate every customer experience.
             </p>
-            <div className="flex gap-4">
-              {/* Social placeholders */}
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-white">
-                IG
-              </div>
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-white">
-                FB
-              </div>
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-white">
-                IN
-              </div>
+            <div className="flex items-center gap-3">
+              {socials.map(({ img, label }) => (
+                <a key={label} href="#" aria-label={label} className="hover:scale-110 transition-transform duration-200">
+                  <img src={img} alt={label} className="w-8 h-8 object-contain" />
+                </a>
+              ))}
             </div>
           </div>
-          
+
+          {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-white mb-6 font-display tracking-wide uppercase text-sm">Product</h4>
-            <ul className="space-y-4">
-              <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="hover:text-primary transition-colors">How it Works</a></li>
-              <li><a href="#pricing" className="hover:text-primary transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Demo</a></li>
+            <h4 className="font-bold text-slate-900 mb-6 font-display tracking-wide uppercase text-sm">Quick Links</h4>
+            <ul className="space-y-3">
+              {quickLinks.map(({ name, href }) => (
+                <li key={name}>
+                  <a href={href} className="text-slate-500 hover:text-primary transition-colors text-sm">{name}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h4 className="font-bold text-white mb-6 font-display tracking-wide uppercase text-sm">Company</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
+            <h4 className="font-bold text-slate-900 mb-6 font-display tracking-wide uppercase text-sm">Company</h4>
+            <ul className="space-y-3">
+              {companyLinks.map(({ name, href }) => (
+                <li key={name}>
+                  <a href={href} className="text-slate-500 hover:text-primary transition-colors text-sm">{name}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        
-        <div className="pt-8 border-t border-slate-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} AT Digital Menu. All Rights Reserved.</p>
-          <p>Designed with ❤️ for the F&B Industry</p>
+
+        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-slate-500">
+          <p>
+            © {new Date().getFullYear()} AT Digital Menu. All Rights Reserved. Product developed by{" "}
+            <a
+              href="https://airavatatechnologies.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary hover:underline"
+            >
+              AIRAVATA TECHNOLOGIES
+            </a>
+          </p>
+          <p>Designed with 💛 for the F&B Industry</p>
         </div>
       </div>
     </footer>
