@@ -673,17 +673,38 @@ function ContactSection() {
               Join hundreds of businesses using AT Digital Menu to increase sales, streamline operations, and elevate customer experience.
             </p>
 
-            <div className="space-y-4">
-              {[
-                "100% Free Menu Setup & Onboarding",
-                "7-Day Free Trial — No Risk",
-                "Go Live in Minutes, Not Days",
-              ].map((point) => (
-                <div key={point} className="flex items-start gap-3">
-                  <span className="text-primary font-bold text-lg leading-none mt-0.5">·</span>
-                  <p className="text-slate-700 font-medium">{point}</p>
-                </div>
-              ))}
+            {/* Connect with us */}
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Connect with us</h3>
+            <div className="space-y-4 mb-10">
+              <a href="tel:+919619523254" className="flex items-center gap-3 group">
+                <img src={`${import.meta.env.BASE_URL}images/call-icon.png`} alt="Phone" className="w-7 h-7 object-contain shrink-0" />
+                <span className="text-slate-700 font-medium group-hover:text-primary transition-colors">+91 9619523254</span>
+              </a>
+              <a href="mailto:info@atdigitalmenu.com" className="flex items-center gap-3 group">
+                <img src={`${import.meta.env.BASE_URL}images/mail-icon.png`} alt="Email" className="w-7 h-7 object-contain shrink-0" />
+                <span className="text-slate-700 font-medium group-hover:text-primary transition-colors">info@atdigitalmenu.com</span>
+              </a>
+              <div className="flex items-start gap-3">
+                <img src={`${import.meta.env.BASE_URL}images/location-icon.png`} alt="Location" className="w-7 h-7 object-contain shrink-0 mt-0.5" />
+                <span className="text-slate-700 font-medium leading-relaxed">205/ Kairali Park, Katemanivali, Kalyan East, 421306</span>
+              </div>
+            </div>
+
+            {/* Follow our socials */}
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Follow our socials</h3>
+            <div className="flex items-center gap-4">
+              <a href="#" aria-label="Instagram" className="hover:scale-110 transition-transform duration-200">
+                <img src={`${import.meta.env.BASE_URL}images/instagram.png`} alt="Instagram" className="w-9 h-9 object-contain" />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="hover:scale-110 transition-transform duration-200">
+                <img src={`${import.meta.env.BASE_URL}images/linkedin.png`} alt="LinkedIn" className="w-9 h-9 object-contain" />
+              </a>
+              <a href="#" aria-label="Facebook" className="hover:scale-110 transition-transform duration-200">
+                <img src={`${import.meta.env.BASE_URL}images/facebook.png`} alt="Facebook" className="w-9 h-9 object-contain" />
+              </a>
+              <a href="#" aria-label="YouTube" className="hover:scale-110 transition-transform duration-200">
+                <img src={`${import.meta.env.BASE_URL}images/youtube.png`} alt="YouTube" className="w-9 h-9 object-contain" />
+              </a>
             </div>
           </Reveal>
 
@@ -844,6 +865,21 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/919619523254"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform duration-200 drop-shadow-xl"
+      >
+        <img
+          src={`${import.meta.env.BASE_URL}images/whatsapp-icon.png`}
+          alt="WhatsApp"
+          className="w-14 h-14 object-contain"
+        />
+      </a>
     </div>
   );
 }
