@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PhoneInput from "react-phone-number-input";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { 
@@ -631,7 +632,7 @@ function FaqSection() {
 
 function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
-  const [countryCode, setCountryCode] = useState("+91");
+  const [phoneValue, setPhoneValue] = useState<string | undefined>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -647,21 +648,17 @@ function ContactSection() {
     "QSR & Fast Food",
     "Bakeries & Sweets",
     "Dhaba & Street Food",
-  ];
-
-  const countryCodes = [
-    { code: "+91", flag: "🇮🇳", label: "IN" },
-    { code: "+1", flag: "🇺🇸", label: "US" },
-    { code: "+44", flag: "🇬🇧", label: "GB" },
-    { code: "+971", flag: "🇦🇪", label: "AE" },
-    { code: "+65", flag: "🇸🇬", label: "SG" },
-    { code: "+60", flag: "🇲🇾", label: "MY" },
-    { code: "+61", flag: "🇦🇺", label: "AU" },
+    "Others (Let's connect to discuss)",
   ];
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight">
+            Ready to Grow? <span className="text-primary">Your Smarter Menu Starts Here</span>
+          </h2>
+        </Reveal>
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           {/* Left: Copy & trust points */}
@@ -696,14 +693,14 @@ function ContactSection() {
               <a href="#" aria-label="Instagram" className="hover:scale-110 transition-transform duration-200">
                 <img src={`${import.meta.env.BASE_URL}images/instagram.png`} alt="Instagram" className="w-9 h-9 object-contain" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:scale-110 transition-transform duration-200">
-                <img src={`${import.meta.env.BASE_URL}images/linkedin.png`} alt="LinkedIn" className="w-9 h-9 object-contain" />
-              </a>
               <a href="#" aria-label="Facebook" className="hover:scale-110 transition-transform duration-200">
                 <img src={`${import.meta.env.BASE_URL}images/facebook.png`} alt="Facebook" className="w-9 h-9 object-contain" />
               </a>
               <a href="#" aria-label="YouTube" className="hover:scale-110 transition-transform duration-200">
                 <img src={`${import.meta.env.BASE_URL}images/youtube.png`} alt="YouTube" className="w-9 h-9 object-contain" />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="hover:scale-110 transition-transform duration-200">
+                <img src={`${import.meta.env.BASE_URL}images/linkedin.png`} alt="LinkedIn" className="w-9 h-9 object-contain" />
               </a>
             </div>
           </Reveal>
@@ -751,18 +748,13 @@ function ContactSection() {
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number</label>
-                  <div className="flex gap-2">
-                    <select
-                      value={countryCode}
-                      onChange={(e) => setCountryCode(e.target.value)}
-                      className="h-12 rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 shrink-0 cursor-pointer"
-                    >
-                      {countryCodes.map(({ code, flag, label }) => (
-                        <option key={code} value={code}>{flag} {code}</option>
-                      ))}
-                    </select>
-                    <Input placeholder="Phone number" type="tel" required className="flex-1" />
-                  </div>
+                  <PhoneInput
+                    defaultCountry="IN"
+                    value={phoneValue}
+                    onChange={setPhoneValue}
+                    placeholder="Phone number"
+                    className="phone-input-field"
+                  />
                 </div>
 
                 <div>

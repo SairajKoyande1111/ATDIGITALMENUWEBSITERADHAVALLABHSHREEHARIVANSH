@@ -99,3 +99,85 @@
     @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 hover:border-primary/20;
   }
 }
+
+/* react-phone-number-input custom styling */
+.phone-input-field {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 0 1rem;
+  gap: 0.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.phone-input-field:focus-within {
+  border-color: var(--color-primary, #b45309);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary, #b45309) 20%, transparent);
+}
+
+.phone-input-field .PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 2px;
+  flex-shrink: 0;
+}
+
+.phone-input-field .PhoneInputCountrySelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.phone-input-field .PhoneInputCountrySelectArrow {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-style: solid;
+  border-color: #94a3b8;
+  border-top-width: 0;
+  border-bottom-width: 1.5px;
+  border-left-width: 0;
+  border-right-width: 1.5px;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  margin-left: 2px;
+}
+
+.phone-input-field .PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.25rem;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.phone-input-field .PhoneInputCountryIconImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-input-field .PhoneInputInput {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: #0f172a;
+  padding: 0;
+}
+
+.phone-input-field .PhoneInputInput::placeholder {
+  color: #94a3b8;
+}

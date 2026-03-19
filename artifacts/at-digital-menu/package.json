@@ -27,5 +27,8 @@
     "tailwindcss": "catalog:",
     "vite": "catalog:",
     "wouter": "^3.3.5"
+  },
+  "dependencies": {
+    "react-phone-number-input": "^3.4.16"
   }
 }
