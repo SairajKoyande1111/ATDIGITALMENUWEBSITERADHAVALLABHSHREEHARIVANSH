@@ -204,7 +204,7 @@ function ProblemSection() {
     {
       emoji: "👤",
       title: "No Customer Insights",
-      desc: "You don't know who's coming back or why. Every business decision is a guess.",
+      desc: "No order history. No preferences. No idea who your best customers are. You can't grow what you can't measure.",
     },
     {
       emoji: "🎨",
