@@ -403,14 +403,14 @@ function TargetMarketSection() {
 function ValueSection() {
   const BASE = import.meta.env.BASE_URL;
   const values = [
-    { img: `${BASE}images/adv-zero-printing.png`, title: "💰 Zero Printing Cost", line1: "Cut printing costs completely.", line2: "Save ₹1,00,000+ every year." },
-    { img: `${BASE}images/adv-instant-control.png`, title: "⚡ Instant Control", line1: "Update prices and items instantly.", line2: "Stay in control across all tables." },
-    { img: `${BASE}images/adv-ai-insights.png`, title: "🤖 AI Insights", line1: "Turn data into smart decisions.", line2: "Boost sales with actionable insights." },
-    { img: `${BASE}images/adv-smart-marketing.png`, title: "📣 Smart Marketing", line1: "Promote your menu everywhere.", line2: "Drive traffic via WhatsApp & Instagram." },
-    { img: `${BASE}images/adv-touch-free.png`, title: "🦠 Touch-Free Dining", line1: "Offer a fully contactless experience.", line2: "Enable access with QR-based menus." },
-    { img: `${BASE}images/adv-eco-impact.png`, title: "🌱 Eco Impact", line1: "Go completely paperless today.", line2: "Build a strong eco-friendly brand." },
-    { img: `${BASE}images/adv-high-engagement.png`, title: "📈 High Engagement", line1: "Capture attention with rich visuals.", line2: "Increase conversions with interactions." },
-    { img: `${BASE}images/adv-smart-intelligence.png`, title: "🧠 Smart Intelligence", line1: "Understand customer behavior deeply.", line2: "Optimize every interaction effortlessly." },
+    { img: `${BASE}images/adv-zero-printing.png`, title: "Zero Printing Cost", line1: "Cut printing costs completely.", line2: "Save ₹1,00,000+ every year." },
+    { img: `${BASE}images/adv-instant-control.png`, title: "Instant Control", line1: "Update prices and items instantly.", line2: "Stay in control across all tables." },
+    { img: `${BASE}images/adv-ai-insights.png`, title: "AI Insights", line1: "Turn data into smart decisions.", line2: "Boost sales with actionable insights." },
+    { img: `${BASE}images/adv-smart-marketing.png`, title: "Smart Marketing", line1: "Promote your menu everywhere.", line2: "Drive traffic via WhatsApp & Instagram." },
+    { img: `${BASE}images/adv-touch-free.png`, title: "Touch-Free Dining", line1: "Offer a fully contactless experience.", line2: "Enable access with QR-based menus." },
+    { img: `${BASE}images/adv-eco-impact.png`, title: "Eco Impact", line1: "Go completely paperless today.", line2: "Build a strong eco-friendly brand." },
+    { img: `${BASE}images/adv-high-engagement.png`, title: "High Engagement", line1: "Capture attention with rich visuals.", line2: "Increase conversions with interactions." },
+    { img: `${BASE}images/adv-smart-intelligence.png`, title: "Smart Intelligence", line1: "Understand customer behavior deeply.", line2: "Optimize every interaction effortlessly." },
   ];
 
   return (
@@ -432,8 +432,8 @@ function ValueSection() {
                   className="w-36 h-36 object-contain mb-5 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg"
                 />
                 <h3 className="text-base font-semibold text-slate-900 mb-2">{val.title}</h3>
-                <p className="text-sm text-slate-900 leading-relaxed">{val.line1}</p>
-                <p className="text-sm text-slate-900 leading-relaxed">{val.line2}</p>
+                <p className="text-sm text-slate-900 leading-relaxed text-justify md:text-center">{val.line1}</p>
+                <p className="text-sm text-slate-900 leading-relaxed text-justify md:text-center">{val.line2}</p>
               </div>
             </Reveal>
           ))}
