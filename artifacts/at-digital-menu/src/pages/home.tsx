@@ -322,34 +322,34 @@ function FeaturesSection() {
   return (
     <section id="features" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+        <Reveal className="text-center mx-auto mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight md:whitespace-nowrap">
             Smart Menus Built with <span className="text-primary">Smart Features</span>
           </h2>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {features.map((feature, i) => (
             <Reveal key={i} delay={i * 0.05}>
-              <div className="flex items-center gap-4 group cursor-pointer">
+              <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-3 group cursor-pointer">
                 <div className="shrink-0">
                   {feature.img ? (
                     <img
                       src={feature.img}
                       alt={feature.title}
-                      className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
+                      className="w-16 h-16 md:w-20 md:h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
                     />
                   ) : feature.icon ? (
-                    <div className="w-20 h-20 bg-primary/5 text-primary rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                      <feature.icon className="h-10 w-10" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/5 text-primary rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      <feature.icon className="h-8 w-8 md:h-10 md:w-10" />
                     </div>
                   ) : (
-                    <div className="w-20 h-20 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 flex items-center justify-center">
                       <span className="text-xs text-slate-400 font-medium">Soon</span>
                     </div>
                   )}
                 </div>
-                <h3 className="text-base font-semibold text-slate-900 leading-snug">{feature.title}</h3>
+                <h3 className="text-sm md:text-base font-semibold text-slate-900 leading-snug">{feature.title}</h3>
               </div>
             </Reveal>
           ))}
