@@ -155,28 +155,28 @@ function HeroSection() {
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-full max-w-[560px] object-contain flex-shrink-0"
+              className="w-full max-w-[170px] sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
-            {/* QR column — sm+ compact, lg+ full */}
-            <div className="hidden sm:flex flex-col gap-2 flex-shrink-0 -ml-8 lg:-ml-16 self-start mt-8">
+            {/* QR column — all screen sizes */}
+            <div className="flex flex-col gap-1 sm:gap-2 flex-shrink-0 -ml-3 sm:-ml-8 lg:-ml-16 self-start mt-3 sm:mt-8">
               {/* QR card image */}
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
-                className="w-[110px] lg:w-[270px] object-contain shadow-lg"
+                className="w-[90px] sm:w-[110px] lg:w-[270px] object-contain shadow-lg"
               />
               {/* Tap / Scan button */}
-              <Button className="w-full text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
+              <Button className="w-full text-[9px] sm:text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
-              {/* Get yours today — no card, just text */}
-              <div className="px-1 lg:px-2 pt-1">
-                <p className="text-[9px] lg:text-sm font-bold text-slate-900 mb-0.5">Get yours today</p>
-                <div className="font-mono text-[8px] lg:text-sm flex items-center">
+              {/* Get yours today */}
+              <div className="px-0.5 sm:px-1 lg:px-2 pt-0.5 sm:pt-1">
+                <p className="text-[8px] sm:text-[9px] lg:text-sm font-bold text-slate-900 mb-0.5">Get yours today</p>
+                <div className="font-mono text-[7px] sm:text-[8px] lg:text-sm flex items-center">
                   <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
-                  <span style={{ display: 'inline-block', width: '7ch', overflow: 'hidden' }}>
-                    <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary inline-block"> yourbrand</span>
+                  <span style={{ display: 'inline-block', width: '9ch', overflow: 'hidden' }}>
+                    <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary">yourbrand</span>
                   </span>
                 </div>
               </div>
@@ -184,13 +184,15 @@ function HeroSection() {
           </Reveal>
           <style dangerouslySetInnerHTML={{__html: `
             .typewriter-brand {
+              display: inline-block;
+              overflow: hidden;
               width: 0;
-              animation: brandType 2.2s steps(10) 0.4s infinite;
+              animation: brandType 2.5s steps(9) 0.4s infinite;
             }
             @keyframes brandType {
               0%   { width: 0 }
-              50%  { width: 7ch }
-              90%  { width: 7ch }
+              45%  { width: 9ch }
+              85%  { width: 9ch }
               100% { width: 0 }
             }
           `}} />
