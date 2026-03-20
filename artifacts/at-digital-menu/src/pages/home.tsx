@@ -102,10 +102,40 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
           <Reveal className="max-w-2xl order-2 lg:order-1">
+            <p className="text-xl sm:text-2xl font-semibold text-primary tracking-wide mb-3">Scan. Order. Impress.</p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 font-display">
-              Replace Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Physical Menu.</span><br />
-              Upgrade Your Guest Experience.
+              Replace Your<br />
+              <span className="relative inline-block">
+                Paper Menu
+                <span className="strike-line" />
+              </span><br />
+              With Something Smarter.<br />
+              <span className="relative inline-block">
+                Stop Printing.
+                <span className="strike-line strike-line-delay" />
+              </span><br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Start Digitalizing.</span>
             </h1>
+            <style dangerouslySetInnerHTML={{__html: `
+              .strike-line {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 5px;
+                width: 0%;
+                background: #ef4444;
+                border-radius: 2px;
+                animation: strikeThrough 0.8s ease-out 0.6s forwards;
+              }
+              .strike-line-delay {
+                animation-delay: 1.2s;
+              }
+              @keyframes strikeThrough {
+                from { width: 0%; }
+                to { width: 100%; }
+              }
+            `}} />
             <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
               AT Digital Menu is an enterprise-grade QR-based platform — instantly updated, beautifully designed, and built for every food & beverage establishment.
             </p>
