@@ -113,7 +113,7 @@ function HeroSection() {
                 Stop Printing.
                 <span className="strike-line strike-line-delay" />
               </span><br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Start Digitalizing.</span>
+              <span className="text-primary">Start Digitalizing.</span>
             </h1>
             <style dangerouslySetInnerHTML={{__html: `
               .strike-line {
