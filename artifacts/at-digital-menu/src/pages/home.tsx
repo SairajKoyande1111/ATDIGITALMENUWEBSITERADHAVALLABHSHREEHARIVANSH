@@ -157,7 +157,7 @@ function HeroSection() {
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="-ml-10 w-[78%] sm:ml-0 sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
+              className="-ml-16 w-[84%] sm:ml-0 sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — flex-1 on mobile fills remaining width, fixed on desktop */}
