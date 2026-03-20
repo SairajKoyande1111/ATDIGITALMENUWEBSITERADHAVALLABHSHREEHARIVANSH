@@ -32,9 +32,11 @@ function Navbar() {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav py-1" : "bg-transparent py-2"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="group">
+        <div className="relative flex items-center justify-between">
+          {/* Mobile spacer to balance hamburger so logo centres properly */}
+          <div className="md:hidden w-10 h-10 flex-shrink-0" />
+          {/* Logo — centred on mobile, left-aligned on desktop */}
+          <Link href="/" className="group absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="AT Digital Menu"
@@ -97,7 +99,7 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="bg-white pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-x-hidden">
+    <section className="bg-white pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-6 lg:gap-6 items-center">
 
@@ -167,11 +169,11 @@ function HeroSection() {
                 alt="Scan to View Menu QR Card"
                 className="w-full sm:w-[110px] lg:w-[270px] object-contain shadow-lg"
               />
-              <Button className="w-full text-[12px] sm:text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
+              <Button className="w-full text-[13px] sm:text-[10px] lg:text-base font-semibold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
               <div className="pt-0.5 sm:pt-1 text-center sm:text-left">
-                <div className="font-mono text-[10px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
+                <div className="font-mono text-[11px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
                   <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
                   <span style={{ display: 'inline-block', width: '9ch', overflow: 'hidden' }}>
                     <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary">yourbrand</span>
