@@ -104,12 +104,11 @@ function HeroSection() {
           <Reveal className="max-w-2xl order-2 lg:order-1">
             <p className="text-xl sm:text-2xl font-semibold text-primary tracking-wide mb-3">Scan. Order. Impress.</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
-              <span className="whitespace-nowrap">Replace Your <span className="relative inline-block">
+              <span className="whitespace-nowrap">Replace Your <span className="relative inline-block text-slate-400">
                 Paper Menu
                 <span className="strike-line" />
               </span></span><br />
-              With Something Smarter.<br />
-              <span className="relative inline-block">
+              <span className="relative inline-block text-slate-400">
                 Stop Printing.
                 <span className="strike-line strike-line-delay" />
               </span><br />
@@ -118,21 +117,21 @@ function HeroSection() {
             <style dangerouslySetInnerHTML={{__html: `
               .strike-line {
                 position: absolute;
-                left: 0;
+                left: 50%;
                 top: 50%;
-                transform: translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
                 height: 5px;
                 width: 0%;
-                background: #ef4444;
+                background: hsl(var(--primary));
                 border-radius: 2px;
-                animation: strikeThrough 0.8s ease-out 0.6s forwards;
+                animation: strikeThrough 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
               }
               .strike-line-delay {
-                animation-delay: 1.2s;
+                animation-delay: 1.1s;
               }
               @keyframes strikeThrough {
                 from { width: 0%; }
-                to { width: 100%; }
+                to { width: 105%; }
               }
             `}} />
             <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
