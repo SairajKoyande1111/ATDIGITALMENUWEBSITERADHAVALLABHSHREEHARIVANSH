@@ -97,21 +97,11 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] max-w-7xl">
-        <div className="absolute top-20 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute top-40 right-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl opacity-50"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="bg-white pt-32 pb-20 lg:pt-48 lg:pb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
+
           <Reveal className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6">
-              <Sparkles className="h-4 w-4" />
-              <span>The Future of Dining</span>
-            </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 font-display">
               Replace Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Physical Menu.</span><br />
               Upgrade Your Guest Experience.
@@ -129,52 +119,19 @@ function HeroSection() {
                 View Live Demo
               </Button>
             </div>
-            <div className="mt-8 flex items-center gap-4 text-sm text-slate-500 font-medium">
-              <div className="flex -space-x-2">
-                {[1,2,3,4].map(i => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center overflow-hidden">
-                    <img src={`https://images.unsplash.com/photo-${1500000000000 + i}?w=100&h=100&fit=crop`} alt="User" className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-              <p>Trusted by <span className="text-slate-900 font-bold">500+</span> restaurants</p>
-            </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="relative lg:h-[600px] flex justify-center items-center">
-            <div className="relative w-full max-w-[400px] aspect-[3/4]">
-              {/* Decorative rings behind phone */}
-              <div className="absolute inset-0 border-2 border-slate-100 rounded-full scale-110 opacity-50 animate-[spin_60s_linear_infinite]"></div>
-              <div className="absolute inset-0 border border-primary/20 rounded-full scale-150 opacity-30 animate-[spin_40s_linear_infinite_reverse]"></div>
-              
-              <img 
-                src={`${import.meta.env.BASE_URL}images/hero-mockup.png`}
-                alt="Digital Menu on Smartphone" 
-                className="w-full h-full object-contain relative z-10 drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]"
-                style={{ filter: "drop-shadow(0 25px 35px rgba(0,0,0,0.1))" }}
-              />
-              
-              {/* Floating badges */}
-              <div className="absolute top-1/4 -left-12 bg-white p-3 rounded-2xl shadow-xl border border-slate-100 z-20 flex items-center gap-3 animate-[float_5s_ease-in-out_infinite_reverse]">
-                <div className="bg-green-100 p-2 rounded-lg text-green-600"><Check size={20} /></div>
-                <div>
-                  <p className="text-xs text-slate-500 font-medium">Price Updated</p>
-                  <p className="text-sm font-bold text-slate-900">Instantly</p>
-                </div>
-              </div>
-            </div>
+          <Reveal delay={0.2} className="flex justify-center items-center">
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+              alt="AT Digital Menu on Smartphone"
+              className="w-full max-w-[380px] object-contain"
+              style={{ mixBlendMode: "multiply" }}
+            />
           </Reveal>
+
         </div>
       </div>
-      
-      {/* CSS for custom float animation */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
-          100% { transform: translateY(0px); }
-        }
-      `}} />
     </section>
   );
 }
