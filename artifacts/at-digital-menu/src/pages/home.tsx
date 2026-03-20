@@ -104,8 +104,7 @@ function HeroSection() {
           <Reveal className="max-w-2xl order-2 lg:order-1">
             <p className="text-xl sm:text-2xl font-semibold text-primary tracking-wide mb-3">Scan. Order. Impress.</p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 font-display">
-              Replace Your<br />
-              <span className="relative inline-block">
+              Replace Your <span className="relative inline-block">
                 Paper Menu
                 <span className="strike-line" />
               </span><br />
