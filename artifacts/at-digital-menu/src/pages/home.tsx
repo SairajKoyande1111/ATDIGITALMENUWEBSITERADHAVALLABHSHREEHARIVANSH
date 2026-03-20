@@ -151,12 +151,19 @@ function HeroSection() {
           </Reveal>
 
           <Reveal delay={0.2} className="flex justify-center items-center order-1 lg:order-2">
-            <img
-              src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
-              alt="AT Digital Menu on Smartphone"
-              className="w-full max-w-[620px] object-contain"
-              style={{ mixBlendMode: "multiply" }}
-            />
+            <div className="flex items-center justify-center gap-3">
+              <img
+                src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+                alt="AT Digital Menu on Smartphone"
+                className="w-full max-w-[420px] object-contain"
+                style={{ mixBlendMode: "multiply" }}
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}images/qr-card.png`}
+                alt="Scan to View Menu QR Card"
+                className="w-[160px] sm:w-[190px] object-contain rounded-2xl shadow-lg flex-shrink-0"
+              />
+            </div>
           </Reveal>
 
         </div>
