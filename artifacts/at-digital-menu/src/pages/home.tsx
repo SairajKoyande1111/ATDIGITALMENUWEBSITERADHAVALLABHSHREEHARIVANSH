@@ -155,7 +155,7 @@ function HeroSection() {
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-[54%] sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
+              className="w-[62%] sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — flex-1 fills remaining space on mobile, fixed width on desktop */}
@@ -171,9 +171,9 @@ function HeroSection() {
                 Tap / Scan for Demo
               </Button>
               {/* Get yours today */}
-              <div className="pt-0.5 sm:pt-1">
+              <div className="pt-0.5 sm:pt-1 text-center sm:text-left">
                 <p className="text-[8px] sm:text-[9px] lg:text-sm font-bold text-slate-900 mb-0.5">Get yours today</p>
-                <div className="font-mono text-[7px] sm:text-[8px] lg:text-sm flex items-center flex-wrap">
+                <div className="font-mono text-[7px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
                   <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
                   <span style={{ display: 'inline-block', width: '9ch', overflow: 'hidden' }}>
                     <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary">yourbrand</span>
