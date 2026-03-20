@@ -159,7 +159,7 @@ function HeroSection() {
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — sm+ compact, lg+ full */}
-            <div className="hidden sm:flex flex-col gap-2 flex-shrink-0 -ml-10 lg:-ml-20 self-stretch">
+            <div className="hidden sm:flex flex-col gap-2 flex-shrink-0 -ml-20 lg:-ml-36 self-start mt-8">
               {/* QR card image */}
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
@@ -170,12 +170,14 @@ function HeroSection() {
               <Button className="w-full text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
-              {/* Brand card — stretches to match phone bottom */}
-              <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl p-2 lg:p-4 flex flex-col justify-center min-h-0">
-                <p className="text-[9px] lg:text-sm font-bold text-slate-900 mb-1">Get yours today</p>
-                <div className="flex items-center flex-wrap gap-x-0.5 font-mono text-[8px] lg:text-sm">
+              {/* Get yours today — no card, just text */}
+              <div className="px-1 lg:px-2 pt-1">
+                <p className="text-[9px] lg:text-sm font-bold text-slate-900 mb-0.5">Get yours today</p>
+                <div className="font-mono text-[8px] lg:text-sm flex items-center">
                   <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
-                  <span className="typewriter-brand text-primary font-semibold overflow-hidden whitespace-nowrap border-r border-primary inline-block"> yourbrand</span>
+                  <span style={{ display: 'inline-block', width: '7ch', overflow: 'hidden' }}>
+                    <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary inline-block"> yourbrand</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -187,8 +189,8 @@ function HeroSection() {
             }
             @keyframes brandType {
               0%   { width: 0 }
-              50%  { width: 10ch }
-              90%  { width: 10ch }
+              50%  { width: 7ch }
+              90%  { width: 7ch }
               100% { width: 0 }
             }
           `}} />
