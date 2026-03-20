@@ -150,20 +150,38 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex justify-center items-center order-1 lg:order-2">
-            <div className="relative flex justify-center">
+          <Reveal delay={0.2} className="flex justify-start items-center order-1 lg:order-2">
+            <div className="relative">
               <img
                 src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
                 alt="AT Digital Menu on Smartphone"
                 className="w-full max-w-[620px] object-contain"
                 style={{ mixBlendMode: "multiply" }}
               />
-              <img
-                src={`${import.meta.env.BASE_URL}images/qr-card.png`}
-                alt="Scan to View Menu QR Card"
-                className="hidden lg:block absolute right-[-110px] top-1/2 -translate-y-1/2 w-[100px] object-contain rounded-2xl shadow-lg"
-              />
+              {/* QR card + typewriter — desktop only, floats top-right of phone */}
+              <div className="hidden lg:flex flex-col items-center gap-2 absolute right-[-145px] top-[6%]">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/qr-card.png`}
+                  alt="Scan to View Menu QR Card"
+                  className="w-[130px] object-contain rounded-2xl shadow-lg"
+                />
+                <div className="text-center">
+                  <p className="typewriter-url text-[10px] font-mono font-semibold text-primary leading-tight overflow-hidden whitespace-nowrap border-r-2 border-primary">yourbrand.atdigitalmenu.com</p>
+                  <p className="text-[10px] font-bold text-slate-700 mt-1 tracking-wide uppercase">Get Yours Now</p>
+                </div>
+              </div>
             </div>
+            <style dangerouslySetInnerHTML={{__html: `
+              .typewriter-url {
+                width: 0;
+                animation: typing 2.5s steps(28) 0.5s infinite alternate;
+              }
+              @keyframes typing {
+                0%   { width: 0 }
+                60%  { width: 28ch }
+                100% { width: 28ch }
+              }
+            `}} />
           </Reveal>
 
         </div>
