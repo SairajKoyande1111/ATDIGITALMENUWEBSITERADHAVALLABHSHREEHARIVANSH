@@ -108,7 +108,7 @@ function HeroSection() {
                 Paper Menus
                 <span className="strike-line" />
               </span></span><br />
-              With Smart Menus<br />
+              With AI Smart Menus<br />
               <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
                 Stop Printing.
                 <span className="strike-line strike-line-delay" />
