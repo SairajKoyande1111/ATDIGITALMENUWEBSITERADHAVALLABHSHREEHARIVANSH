@@ -102,7 +102,7 @@ function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
           <Reveal className="max-w-2xl order-2 lg:order-1">
-            <p className="text-sm font-semibold text-primary tracking-wide mb-3 whitespace-nowrap">Smart Menus. Smarter Marketing. Smartest Businesses.</p>
+            <p className="text-sm font-semibold text-primary tracking-wide mb-3 whitespace-nowrap">With AI Smart Menus</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
               <span className="whitespace-nowrap">Replace <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
                 Paper Menus
