@@ -150,7 +150,7 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-center justify-start gap-0 order-1 lg:order-2 lg:-ml-10">
+          <Reveal delay={0.2} className="flex items-start justify-start gap-0 order-1 lg:order-2 lg:-ml-16">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
@@ -158,29 +158,17 @@ function HeroSection() {
               className="w-full max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
-            {/* QR card + typewriter — desktop only */}
-            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 self-start pt-8 -ml-20">
+            {/* QR card — desktop only */}
+            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 -ml-20">
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
-                className="w-[250px] object-contain shadow-lg"
+                className="w-[270px] object-contain shadow-lg"
               />
-              <div className="text-center w-[220px]">
-                <p className="typewriter-url text-[11px] font-mono font-semibold text-primary leading-tight overflow-hidden whitespace-nowrap border-r-2 border-primary mx-auto">yourbrand.atdigitalmenu.com</p>
-                <p className="text-[11px] font-bold text-slate-700 mt-1 tracking-wide uppercase">Get Yours Now</p>
-              </div>
+              <Button size="sm" className="w-full text-sm font-semibold">
+                Tap / Scan for Demo
+              </Button>
             </div>
-            <style dangerouslySetInnerHTML={{__html: `
-              .typewriter-url {
-                width: 0;
-                animation: typing 2.5s steps(28) 0.5s infinite alternate;
-              }
-              @keyframes typing {
-                0%   { width: 0 }
-                60%  { width: 28ch }
-                100% { width: 28ch }
-              }
-            `}} />
           </Reveal>
 
         </div>
