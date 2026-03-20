@@ -150,21 +150,21 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-start justify-start order-1 lg:order-2 lg:-ml-20">
+          <Reveal delay={0.2} className="flex items-start order-1 lg:order-2 lg:-ml-20 -ml-4 sm:ml-0 w-[calc(100%+1rem)] sm:w-auto">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-full max-w-[170px] sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
+              className="w-[55%] max-w-[240px] sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — all screen sizes */}
-            <div className="flex flex-col gap-1 sm:gap-2 flex-shrink-0 -ml-3 sm:-ml-8 lg:-ml-16 self-start mt-3 sm:mt-8">
+            <div className="flex flex-col gap-1 sm:gap-2 flex-shrink-0 -ml-4 sm:-ml-8 lg:-ml-16 self-start mt-3 sm:mt-8">
               {/* QR card image */}
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
-                className="w-[90px] sm:w-[110px] lg:w-[270px] object-contain shadow-lg"
+                className="w-[120px] sm:w-[110px] lg:w-[270px] object-contain shadow-lg"
               />
               {/* Tap / Scan button */}
               <Button className="w-full text-[9px] sm:text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
