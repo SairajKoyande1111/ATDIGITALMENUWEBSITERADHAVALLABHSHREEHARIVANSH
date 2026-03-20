@@ -150,7 +150,7 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-center justify-start gap-0 order-1 lg:order-2">
+          <Reveal delay={0.2} className="flex items-center justify-start gap-0 order-1 lg:order-2 lg:-ml-10">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
@@ -163,7 +163,7 @@ function HeroSection() {
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
-                className="w-[220px] object-contain shadow-lg"
+                className="w-[250px] object-contain shadow-lg"
               />
               <div className="text-center w-[220px]">
                 <p className="typewriter-url text-[11px] font-mono font-semibold text-primary leading-tight overflow-hidden whitespace-nowrap border-r-2 border-primary mx-auto">yourbrand.atdigitalmenu.com</p>
