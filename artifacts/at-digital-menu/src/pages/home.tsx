@@ -159,7 +159,7 @@ function HeroSection() {
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — sm+ compact, lg+ full */}
-            <div className="hidden sm:flex flex-col gap-2 flex-shrink-0 -ml-20 lg:-ml-36 self-start mt-8">
+            <div className="hidden sm:flex flex-col gap-2 flex-shrink-0 -ml-8 lg:-ml-16 self-start mt-8">
               {/* QR card image */}
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
