@@ -125,7 +125,7 @@ function HeroSection() {
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-full max-w-[380px] object-contain"
+              className="w-full max-w-[560px] object-contain"
               style={{ mixBlendMode: "multiply" }}
             />
           </Reveal>
