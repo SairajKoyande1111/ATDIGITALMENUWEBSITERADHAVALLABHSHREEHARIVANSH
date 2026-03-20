@@ -99,7 +99,7 @@ function HeroSection() {
   return (
     <section className="bg-white pt-24 pb-16 lg:pt-32 lg:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-2 items-center">
 
           <Reveal className="max-w-2xl order-2 lg:order-1">
             <p className="text-sm font-semibold text-primary tracking-wide mb-3 whitespace-nowrap">With AI Smart Menus</p>
@@ -150,25 +150,24 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex justify-start items-center order-1 lg:order-2">
-            <div className="relative">
+          <Reveal delay={0.2} className="flex items-center order-1 lg:order-2">
+            {/* Phone */}
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+              alt="AT Digital Menu on Smartphone"
+              className="w-full max-w-[620px] object-contain flex-shrink-0"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            {/* QR card + typewriter — desktop only */}
+            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 -ml-4 self-start pt-8">
               <img
-                src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
-                alt="AT Digital Menu on Smartphone"
-                className="w-full max-w-[620px] object-contain"
-                style={{ mixBlendMode: "multiply" }}
+                src={`${import.meta.env.BASE_URL}images/qr-card.png`}
+                alt="Scan to View Menu QR Card"
+                className="w-[170px] object-contain rounded-2xl shadow-lg"
               />
-              {/* QR card + typewriter — desktop only, floats top-right of phone */}
-              <div className="hidden lg:flex flex-col items-center gap-2 absolute right-[-145px] top-[6%]">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/qr-card.png`}
-                  alt="Scan to View Menu QR Card"
-                  className="w-[130px] object-contain rounded-2xl shadow-lg"
-                />
-                <div className="text-center">
-                  <p className="typewriter-url text-[10px] font-mono font-semibold text-primary leading-tight overflow-hidden whitespace-nowrap border-r-2 border-primary">yourbrand.atdigitalmenu.com</p>
-                  <p className="text-[10px] font-bold text-slate-700 mt-1 tracking-wide uppercase">Get Yours Now</p>
-                </div>
+              <div className="text-center w-[170px]">
+                <p className="typewriter-url text-[11px] font-mono font-semibold text-primary leading-tight overflow-hidden whitespace-nowrap border-r-2 border-primary mx-auto">yourbrand.atdigitalmenu.com</p>
+                <p className="text-[11px] font-bold text-slate-700 mt-1 tracking-wide uppercase">Get Yours Now</p>
               </div>
             </div>
             <style dangerouslySetInnerHTML={{__html: `
