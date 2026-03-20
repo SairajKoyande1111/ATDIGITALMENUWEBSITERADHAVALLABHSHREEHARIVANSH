@@ -97,11 +97,12 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="bg-white pt-24 pb-16 lg:pt-32 lg:pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-6 items-center">
+    <section className="bg-white pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-6 lg:gap-6 items-center">
 
-          <Reveal className="max-w-2xl order-2 lg:order-1">
+          {/* Text column — padded on all sizes */}
+          <Reveal className="max-w-2xl order-2 lg:order-1 px-4 sm:px-6 lg:px-8">
             <p className="text-sm font-semibold text-primary tracking-wide mb-3 whitespace-nowrap">With AI Smart Menus</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
               <span className="whitespace-nowrap">Replace <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
@@ -150,27 +151,25 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-start order-1 lg:order-2 lg:-ml-20 -mx-4 sm:mx-0 overflow-hidden sm:overflow-visible">
-            {/* Phone — full-bleed left on mobile, scaled on desktop */}
+          {/* Image column — zero padding on mobile so phone+QR go full-bleed edge-to-edge */}
+          <Reveal delay={0.2} className="flex items-start order-1 lg:order-2 lg:-ml-20 w-full">
+            {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-[62%] sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
+              className="w-[58%] sm:w-full sm:max-w-[400px] lg:max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
-            {/* QR column — flex-1 fills remaining space on mobile, fixed width on desktop */}
-            <div className="flex-1 sm:flex-none flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0 sm:-ml-8 lg:-ml-16 self-start mt-2 sm:mt-8 pr-3 sm:pr-0">
-              {/* QR card image */}
+            {/* QR column — flex-1 on mobile fills remaining width, fixed on desktop */}
+            <div className="flex-1 sm:flex-none flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0 sm:-ml-8 lg:-ml-16 self-start mt-2 sm:mt-8 pr-2 sm:pr-0">
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
                 className="w-full sm:w-[110px] lg:w-[270px] object-contain shadow-lg"
               />
-              {/* Tap / Scan button */}
               <Button className="w-full text-[9px] sm:text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
-              {/* Get yours today */}
               <div className="pt-0.5 sm:pt-1 text-center sm:text-left">
                 <p className="text-[8px] sm:text-[9px] lg:text-sm font-bold text-slate-900 mb-0.5">Get yours today</p>
                 <div className="font-mono text-[7px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
@@ -182,6 +181,7 @@ function HeroSection() {
               </div>
             </div>
           </Reveal>
+
           <style dangerouslySetInnerHTML={{__html: `
             .typewriter-brand {
               display: inline-block;
