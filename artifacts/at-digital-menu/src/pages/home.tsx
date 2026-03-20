@@ -101,7 +101,7 @@ function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
-          <Reveal className="max-w-2xl">
+          <Reveal className="max-w-2xl order-1 lg:order-1">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 font-display">
               Replace Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">Physical Menu.</span><br />
               Upgrade Your Guest Experience.
@@ -121,7 +121,7 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex justify-center items-center">
+          <Reveal delay={0.2} className="flex justify-center items-center order-2 lg:order-2">
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
