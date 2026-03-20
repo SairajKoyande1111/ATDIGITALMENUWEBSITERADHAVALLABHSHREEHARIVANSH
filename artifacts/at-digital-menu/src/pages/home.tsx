@@ -150,7 +150,7 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-center justify-start order-1 lg:order-2">
+          <Reveal delay={0.2} className="flex items-center justify-start gap-0 order-1 lg:order-2">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
@@ -159,7 +159,7 @@ function HeroSection() {
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR card + typewriter — desktop only */}
-            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 self-start pt-8">
+            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 self-start pt-8 -ml-8">
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
