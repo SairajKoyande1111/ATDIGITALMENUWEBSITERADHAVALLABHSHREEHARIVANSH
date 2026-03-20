@@ -104,7 +104,7 @@ function HeroSection() {
           <Reveal className="max-w-2xl order-2 lg:order-1">
             <p className="text-xl sm:text-2xl font-semibold text-primary tracking-wide mb-3">Scan. Order. Impress.</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
-              <span className="whitespace-nowrap">Replace Your <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
+              <span className="whitespace-nowrap">Replace <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
                 Paper Menus
                 <span className="strike-line" />
               </span></span><br />
