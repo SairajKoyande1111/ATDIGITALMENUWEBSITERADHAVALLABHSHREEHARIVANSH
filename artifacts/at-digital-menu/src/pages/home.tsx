@@ -99,7 +99,7 @@ function HeroSection() {
   return (
     <section className="bg-white pt-24 pb-16 lg:pt-32 lg:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-2 items-center">
+        <div className="grid lg:grid-cols-[2fr_3fr] gap-12 lg:gap-8 items-center">
 
           <Reveal className="max-w-2xl order-2 lg:order-1">
             <p className="text-sm font-semibold text-primary tracking-wide mb-3 whitespace-nowrap">With AI Smart Menus</p>
@@ -150,20 +150,20 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-center order-1 lg:order-2">
+          <Reveal delay={0.2} className="flex items-center justify-center order-1 lg:order-2">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-full max-w-[620px] object-contain flex-shrink-0"
+              className="w-full max-w-[500px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR card + typewriter — desktop only */}
-            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 -ml-4 self-start pt-8">
+            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 self-start pt-8">
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
-                className="w-[170px] object-contain rounded-2xl shadow-lg"
+                className="w-[190px] object-contain rounded-2xl shadow-lg"
               />
               <div className="text-center w-[170px]">
                 <p className="typewriter-url text-[11px] font-mono font-semibold text-primary leading-tight overflow-hidden whitespace-nowrap border-r-2 border-primary mx-auto">yourbrand.atdigitalmenu.com</p>
