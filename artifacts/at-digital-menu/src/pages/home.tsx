@@ -150,7 +150,7 @@ function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2} className="flex items-start justify-start gap-0 order-1 lg:order-2 lg:-ml-16">
+          <Reveal delay={0.2} className="flex items-start justify-start order-1 lg:order-2 lg:-ml-20">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
@@ -158,18 +158,40 @@ function HeroSection() {
               className="w-full max-w-[560px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
-            {/* QR card — desktop only */}
-            <div className="hidden lg:flex flex-col items-center gap-3 flex-shrink-0 -ml-20">
+            {/* QR column — sm+ compact, lg+ full */}
+            <div className="hidden sm:flex flex-col gap-2 flex-shrink-0 -ml-10 lg:-ml-20 self-stretch">
+              {/* QR card image */}
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
-                className="w-[270px] object-contain shadow-lg"
+                className="w-[110px] lg:w-[270px] object-contain shadow-lg"
               />
-              <Button size="sm" className="w-full text-sm font-semibold">
+              {/* Tap / Scan button */}
+              <Button className="w-full text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
+              {/* Brand card — stretches to match phone bottom */}
+              <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl p-2 lg:p-4 flex flex-col justify-center min-h-0">
+                <p className="text-[9px] lg:text-sm font-bold text-slate-900 mb-1">Get yours today</p>
+                <div className="flex items-center flex-wrap gap-x-0.5 font-mono text-[8px] lg:text-sm">
+                  <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
+                  <span className="typewriter-brand text-primary font-semibold overflow-hidden whitespace-nowrap border-r border-primary inline-block"> yourbrand</span>
+                </div>
+              </div>
             </div>
           </Reveal>
+          <style dangerouslySetInnerHTML={{__html: `
+            .typewriter-brand {
+              width: 0;
+              animation: brandType 2.2s steps(10) 0.4s infinite;
+            }
+            @keyframes brandType {
+              0%   { width: 0 }
+              50%  { width: 10ch }
+              90%  { width: 10ch }
+              100% { width: 0 }
+            }
+          `}} />
 
         </div>
       </div>
