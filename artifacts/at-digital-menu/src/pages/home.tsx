@@ -161,7 +161,7 @@ function HeroSection() {
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — flex-1 on mobile fills remaining width, fixed on desktop */}
-            <div className="flex-1 sm:flex-none flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0 sm:-ml-8 lg:-ml-16 self-start mt-2 sm:mt-8 pr-2 sm:pr-0">
+            <div className="flex-1 sm:flex-none flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0 -ml-10 sm:-ml-8 lg:-ml-16 self-start mt-2 sm:mt-8 pr-2 sm:pr-0">
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
