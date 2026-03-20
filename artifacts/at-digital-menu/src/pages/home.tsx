@@ -167,12 +167,11 @@ function HeroSection() {
                 alt="Scan to View Menu QR Card"
                 className="w-full sm:w-[110px] lg:w-[270px] object-contain shadow-lg"
               />
-              <Button className="w-full text-[9px] sm:text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
+              <Button className="w-full text-[12px] sm:text-[10px] lg:text-base font-bold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
               <div className="pt-0.5 sm:pt-1 text-center sm:text-left">
-                <p className="text-[8px] sm:text-[9px] lg:text-sm font-bold text-slate-900 mb-0.5">Get yours today</p>
-                <div className="font-mono text-[7px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
+                <div className="font-mono text-[10px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
                   <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
                   <span style={{ display: 'inline-block', width: '9ch', overflow: 'hidden' }}>
                     <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary">yourbrand</span>
