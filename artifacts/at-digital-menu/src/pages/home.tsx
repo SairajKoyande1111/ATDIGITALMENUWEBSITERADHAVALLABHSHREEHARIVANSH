@@ -104,13 +104,12 @@ function HeroSection() {
           <Reveal className="max-w-2xl order-2 lg:order-1">
             <p className="text-xl sm:text-2xl font-semibold text-primary tracking-wide mb-3">Scan. Order. Impress.</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
-              Replace Your<br />
-              <span className="relative inline-block" style={{ color: "#5c5c52" }}>
+              <span className="whitespace-nowrap">Replace Your <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
                 Paper Menus
                 <span className="strike-line" />
-              </span><br />
+              </span></span><br />
               With Smart Menus<br />
-              <span className="relative inline-block" style={{ color: "#5c5c52" }}>
+              <span className="relative inline-block" style={{ color: "#3d3d3d" }}>
                 Stop Printing.
                 <span className="strike-line strike-line-delay" />
               </span><br />
