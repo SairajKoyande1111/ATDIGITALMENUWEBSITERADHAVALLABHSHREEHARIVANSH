@@ -3,7 +3,7 @@ import PhoneInput from "react-phone-number-input";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { 
-  ArrowRight, Menu as MenuIcon, X, QrCode, Receipt, Clock, Bug, 
+  ArrowRight, Menu as MenuIcon, X, QrCode, Receipt, Clock, Bug, LayoutGrid,
   Megaphone, UserX, Trash2, ScanLine, Smartphone, Bot, MessageCircle, 
   Sparkles, Star, Database, Paintbrush, Zap, Link as LinkIcon, Mic, 
   Phone, ThumbsUp, Globe, Users, BarChart3, Share2, Ban, Banknote, 
@@ -105,7 +105,7 @@ function HeroSection() {
 
           {/* Text column — padded on all sizes */}
           <Reveal className="max-w-2xl order-2 lg:order-1 px-4 sm:px-6 lg:px-8">
-            <p className="text-sm font-semibold text-primary tracking-wide mb-3">World's #1 AI Smart Digital Menu Platform</p>
+            <p className="text-base sm:text-lg font-semibold text-primary tracking-wide mb-3">World's #1 AI Smart Digital Menu Platform</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
               <span className="whitespace-nowrap">Replace <span className="relative inline-block" style={{ color: "#6b7280" }}>
                 Paper Menus
@@ -138,7 +138,7 @@ function HeroSection() {
                 100% { width: 100%; }
               }
             `}} />
-            <div className="mb-3 flex gap-8">
+            <div className="mb-4 flex gap-8 justify-center sm:justify-start">
               <div className="leading-tight space-y-0.5 text-center">
                 <p className="text-lg sm:text-xl font-semibold text-slate-800">Smart</p>
                 <p className="text-lg sm:text-xl font-semibold text-primary">Experience</p>
@@ -149,20 +149,21 @@ function HeroSection() {
               </div>
               <div className="leading-tight space-y-0.5 text-center">
                 <p className="text-lg sm:text-xl font-semibold text-slate-800">Smartest</p>
-                <p className="text-lg sm:text-xl font-semibold text-primary">Business</p>
+                <p className="text-lg sm:text-xl font-semibold text-primary">Businesses</p>
               </div>
             </div>
-            <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed max-w-xl">
-              Not just a menu. An AI-powered Digital Menu that elevates experience, markets, and grows your business — your smartest business tool.
+            <p className="text-base sm:text-lg mb-8 leading-relaxed max-w-xl">
+              <span className="text-slate-800">Not just a Menu. An AI-powered Digital Menu that Elevates Experience, Markets, and Grows your Business. </span>
+              <span className="text-primary font-semibold">YOUR SMARTEST BUSINESS TOOL</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="group">
-                Get Started Free
+                Get My Smart Menu — Digitalize Now
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button size="lg" variant="outline" className="gap-2 bg-white">
-                <QrCode className="h-5 w-5 text-primary" />
-                View Live Demo
+                <LayoutGrid className="h-5 w-5 text-primary" />
+                Watch It In Action
               </Button>
             </div>
           </Reveal>
