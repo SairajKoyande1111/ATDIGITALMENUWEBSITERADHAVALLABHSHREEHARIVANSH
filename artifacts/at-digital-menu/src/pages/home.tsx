@@ -138,11 +138,14 @@ function HeroSection() {
                 100% { width: 100%; }
               }
             `}} />
-            <p className="text-lg sm:text-xl font-semibold text-slate-800 mb-3 leading-snug max-w-xl">
-              Smart Guest Experience.<br />
-              Smarter Marketing.<br />
-              Smartest Business Growth.
-            </p>
+            <div className="mb-3 leading-tight space-y-0.5">
+              <p className="text-lg sm:text-xl font-semibold text-slate-800">Smart</p>
+              <p className="text-lg sm:text-xl font-semibold text-primary">Guest Experience.</p>
+              <p className="text-lg sm:text-xl font-semibold text-slate-800 mt-2">Smarter</p>
+              <p className="text-lg sm:text-xl font-semibold text-primary">Marketing.</p>
+              <p className="text-lg sm:text-xl font-semibold text-slate-800 mt-2">Smartest</p>
+              <p className="text-lg sm:text-xl font-semibold text-primary">Business Growth.</p>
+            </div>
             <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed max-w-xl">
               Not just a menu. An AI-powered Digital Menu that elevates experience, markets, and grows your business — your smartest business tool.
             </p>
