@@ -107,12 +107,12 @@ function HeroSection() {
           <Reveal className="max-w-2xl order-2 lg:order-1 px-4 sm:px-6 lg:px-8">
             <p className="text-sm font-semibold text-primary tracking-wide mb-3">World's #1 AI Smart Digital Menu Platform</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 leading-[1.15] mb-6 font-display">
-              <span className="whitespace-nowrap">Replace <span className="relative inline-block" style={{ color: "#9ca3af" }}>
+              <span className="whitespace-nowrap">Replace <span className="relative inline-block" style={{ color: "#6b7280" }}>
                 Paper Menus
                 <span className="strike-line" />
               </span></span><br />
               With <span className="text-primary">AI Smart Menus</span><br />
-              <span className="relative inline-block" style={{ color: "#9ca3af" }}>
+              <span className="relative inline-block" style={{ color: "#6b7280" }}>
                 Stop Printing
                 <span className="strike-line strike-line-delay" />
               </span><br />
