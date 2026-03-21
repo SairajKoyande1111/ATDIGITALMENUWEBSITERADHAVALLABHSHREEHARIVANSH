@@ -158,7 +158,7 @@ function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="group">
-                Get My Smart Menu — Digitalize Now
+                Get My Smart Menu
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button size="lg" variant="outline" className="gap-2 bg-white">
