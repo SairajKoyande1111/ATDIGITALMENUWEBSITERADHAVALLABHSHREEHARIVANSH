@@ -187,8 +187,8 @@ function HeroSection() {
               <Button className="w-full text-[13px] sm:text-[10px] lg:text-base font-semibold rounded-full py-1 lg:py-2 h-auto">
                 Tap / Scan for Demo
               </Button>
-              <div className="pt-0.5 sm:pt-1 text-center sm:text-left">
-                <div className="font-mono text-[11px] sm:text-[8px] lg:text-sm flex items-center justify-center sm:justify-start flex-wrap">
+              <div className="pt-0.5 sm:pt-1 text-center">
+                <div className="text-[11px] sm:text-[8px] lg:text-sm flex items-center justify-center flex-wrap" style={{ fontFamily: "'Open Sans', sans-serif" }}>
                   <span className="text-slate-700 whitespace-nowrap">atdigitalmenu.com /</span>
                   <span style={{ display: 'inline-block', width: '9ch', overflow: 'hidden' }}>
                     <span className="typewriter-brand text-primary font-semibold whitespace-nowrap border-r border-primary">yourbrand</span>
@@ -959,12 +959,11 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <ProblemSection />
-        <SolutionSection />
-        <FeaturesSection />
         <TargetMarketSection />
-        <ValueSection />
+        <FeaturesSection />
         <PricingSection />
+        <ProblemSection />
+        <ValueSection />
         <ContactSection />
       </main>
       <Footer />
