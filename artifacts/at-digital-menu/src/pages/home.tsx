@@ -99,7 +99,7 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="bg-white pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-x-hidden">
+    <section className="bg-white pt-28 pb-10 lg:pt-36 lg:pb-14 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-6 lg:gap-6 items-center">
 
@@ -265,9 +265,9 @@ function ProblemSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center max-w-3xl mx-auto mb-16">
+        <Reveal className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-6">
             Physical Menus Are Costing You <span className="text-primary">More Than You Think</span>
           </h2>
@@ -305,7 +305,7 @@ function SolutionSection() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-white relative overflow-hidden">
+    <section id="how-it-works" className="py-14 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
@@ -397,9 +397,9 @@ function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mx-auto mb-16">
+        <Reveal className="text-center mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight md:whitespace-nowrap">
             Smart Menus Built with <span className="text-primary">Smart Features</span>
           </h2>
@@ -449,9 +449,9 @@ function TargetMarketSection() {
   ];
 
   return (
-    <section className="py-24 bg-white border-y border-slate-100">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-5 leading-tight">
             Designed for Every{" "}
             <span style={{ color: "#cc7a00" }}>Food & Beverage</span> Business
@@ -491,9 +491,9 @@ function ValueSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mx-auto mb-16">
+        <Reveal className="text-center mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight md:whitespace-nowrap">
             Smarter <span className="text-primary">Operations.</span> Higher <span className="text-primary">Revenue.</span> Stronger <span className="text-primary">Business</span>
           </h2>
@@ -529,9 +529,9 @@ function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-14 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
             Trusted by F&B Leaders
           </h2>
@@ -594,9 +594,9 @@ function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-white">
+    <section id="pricing" className="py-14 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mx-auto mb-16">
+        <Reveal className="text-center mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
             One Subscription. Complete Business Control.{" "}
             <span className="text-primary">Zero Compromises.</span>
@@ -689,9 +689,9 @@ function FaqSection() {
   ];
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-14 bg-slate-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -728,9 +728,9 @@ function ContactSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight">
             Ready to Grow? <span className="text-primary">Your Smarter Menu </span><span className="text-slate-900">Starts Here</span>
           </h2>
