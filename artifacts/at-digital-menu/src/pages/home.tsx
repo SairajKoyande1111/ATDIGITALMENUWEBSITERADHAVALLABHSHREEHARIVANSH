@@ -122,11 +122,11 @@ function HeroSection() {
               .strike-line {
                 position: absolute;
                 left: 0;
-                top: 50%;
+                top: 55%;
                 transform: translateY(-50%);
                 height: 3px;
                 width: 0%;
-                background: linear-gradient(90deg, hsla(var(--primary)/0.6) 0%, hsla(var(--primary)/0.85) 60%, hsla(var(--primary)/0.5) 100%);
+                background: hsl(var(--primary));
                 border-radius: 3px;
                 animation: strikeThrough 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
               }
@@ -134,9 +134,8 @@ function HeroSection() {
                 animation-delay: 1.4s;
               }
               @keyframes strikeThrough {
-                0%   { width: 0%; opacity: 0.4; }
-                15%  { opacity: 1; }
-                100% { width: 100%; opacity: 0.75; }
+                0%   { width: 0%; }
+                100% { width: 100%; }
               }
             `}} />
             <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
