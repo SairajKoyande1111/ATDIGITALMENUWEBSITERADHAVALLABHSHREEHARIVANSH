@@ -139,15 +139,15 @@ function HeroSection() {
               }
             `}} />
             <div className="mb-3 flex gap-8">
-              <div className="leading-tight space-y-0.5">
+              <div className="leading-tight space-y-0.5 text-center">
                 <p className="text-lg sm:text-xl font-semibold text-slate-800">Smart</p>
-                <p className="text-lg sm:text-xl font-semibold text-primary">Guest Experience.</p>
+                <p className="text-lg sm:text-xl font-semibold text-primary">Experience.</p>
               </div>
-              <div className="leading-tight space-y-0.5">
+              <div className="leading-tight space-y-0.5 text-center">
                 <p className="text-lg sm:text-xl font-semibold text-slate-800">Smarter</p>
                 <p className="text-lg sm:text-xl font-semibold text-primary">Marketing.</p>
                 <p className="text-lg sm:text-xl font-semibold text-slate-800 mt-2">Smartest</p>
-                <p className="text-lg sm:text-xl font-semibold text-primary">Business Growth.</p>
+                <p className="text-lg sm:text-xl font-semibold text-primary whitespace-nowrap">Business Growth.</p>
               </div>
             </div>
             <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed max-w-xl">
