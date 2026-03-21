@@ -138,8 +138,13 @@ function HeroSection() {
                 100% { width: 100%; }
               }
             `}} />
-            <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
-              AT Digital Menu is an enterprise-grade QR-based platform — instantly updated, beautifully designed, and built for every food & beverage establishment.
+            <p className="text-lg sm:text-xl font-semibold text-slate-800 mb-3 leading-snug max-w-xl">
+              Smart Guest Experience.<br />
+              Smarter Marketing.<br />
+              Smartest Business Growth.
+            </p>
+            <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed max-w-xl">
+              Not just a menu. An AI-powered Digital Menu that elevates experience, markets, and grows your business — your smartest business tool.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="group">
