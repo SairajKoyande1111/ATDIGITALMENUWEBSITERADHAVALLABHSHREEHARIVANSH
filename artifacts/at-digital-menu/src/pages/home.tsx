@@ -515,16 +515,18 @@ function TargetMarketSection() {
 
 function AdminPanelSection() {
   const leftFeatures = [
-    { title: "Menu Items", desc: "Add, edit or delete dishes with image, price, description, veg/non-veg tag, ingredients, allergens and nutritional info. Mark any item available or unavailable in one click." },
-    { title: "Categories", desc: "Organise your menu into categories, subcategories and deeper levels. Reorder, show or hide any category at any time." },
-    { title: "Smart Picks", desc: "Highlight specific dishes under sections like Today's Special or Chef's Special. Update your picks anytime without editing the main menu." },
-    { title: "Coupons", desc: "Create percentage or flat amount discounts with validity by date, day or specific hours. Set rules like single use, first visit or limited redemptions." },
+    { title: "Dashboard", desc: "Live snapshot of your entire restaurant — items, categories, customers, coupons and reservations at a glance. Quick action buttons to jump anywhere instantly." },
+    { title: "Menu Items", desc: "Add, edit or delete dishes with image, price, veg/non-veg tag, allergens and nutritional info. Mark items available or unavailable instantly." },
+    { title: "Categories", desc: "Build categories, subcategories and deeper levels. Reorder or hide any category in one click." },
+    { title: "Smart Picks", desc: "Highlight dishes under Today's Special, Chef's Special or any custom section. Update picks anytime without touching the main menu." },
+    { title: "Coupons", desc: "Set % off or flat discounts with date, day or hourly validity. Add rules like single use or first visit only." },
   ];
   const rightFeatures = [
-    { title: "Customers", desc: "Customer name and number is auto-captured when they scan the QR code and enter their details. View and manage your full customer list from the panel." },
-    { title: "Reservations", desc: "View all table bookings with name, phone, date, time, guest count and occasion in one place. Filter by date and export the full list as a CSV." },
-    { title: "Call Waiter", desc: "When a customer taps Call Waiter on the digital menu, the admin panel gets an instant bell notification. It shows the exact table number and customer name." },
-    { title: "Restaurant Settings", desc: "Update your logo, location, contact number, opening hours, social media links and welcome screen — all from one place. Show or hide each section on the customer-facing menu." },
+    { title: "Customers", desc: "Auto-captures name and number when they scan the QR code. View and manage your full customer list from the panel." },
+    { title: "Reservations", desc: "See all bookings — date, time, guests and occasion in one view. Filter by date and export as CSV." },
+    { title: "Call Waiter", desc: "Customer taps Call Waiter on the menu — admin panel rings instantly with the table number and name." },
+    { title: "Analytics", desc: "Track menu performance, popular dishes, peak hours and customer visit trends. Make smarter decisions with real data." },
+    { title: "Restaurant Settings", desc: "Update logo, location, hours, contact, social links and welcome screen from one place. Show or hide each on the customer menu." },
   ];
 
   return (
@@ -539,10 +541,10 @@ function AdminPanelSection() {
 
         <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
-          {/* Left: 4 features */}
-          <Reveal className="flex flex-col gap-7">
+          {/* Left: 5 features — left aligned */}
+          <Reveal className="flex flex-col gap-6">
             {leftFeatures.map((f) => (
-              <div key={f.title} className="text-right">
+              <div key={f.title}>
                 <h4 className="text-base font-semibold text-slate-900 mb-1">{f.title}</h4>
                 <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
               </div>
@@ -558,8 +560,8 @@ function AdminPanelSection() {
             />
           </Reveal>
 
-          {/* Right: 4 features */}
-          <Reveal delay={0.15} className="flex flex-col gap-7">
+          {/* Right: 5 features — left aligned */}
+          <Reveal delay={0.15} className="flex flex-col gap-6">
             {rightFeatures.map((f) => (
               <div key={f.title}>
                 <h4 className="text-base font-semibold text-slate-900 mb-1">{f.title}</h4>
@@ -568,7 +570,7 @@ function AdminPanelSection() {
             ))}
           </Reveal>
 
-          {/* Mobile: laptop shown below both columns */}
+          {/* Mobile: laptop shown between columns */}
           <Reveal className="lg:hidden col-span-full flex justify-center mt-2">
             <img
               src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
