@@ -440,23 +440,23 @@ function FeaturesSection() {
             Smart Menus Built with <span className="text-primary">Smart Features</span>
           </h2>
 
-          {/* Desktop: phone | QR card | phone */}
-          <div className="hidden md:flex items-center justify-center gap-6 lg:gap-10">
+          {/* Desktop: phone | QR card | phone — phones fill equal space */}
+          <div className="hidden md:flex items-center justify-center">
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-56 lg:w-72 xl:w-80 object-contain drop-shadow-xl"
+              className="flex-1 min-w-0 max-w-[420px] lg:max-w-[520px] object-contain drop-shadow-xl"
               style={{ mixBlendMode: "multiply" }}
             />
             <img
               src={`${import.meta.env.BASE_URL}images/qr-card.png`}
               alt="Scan to View Menu QR Card"
-              className="w-40 lg:w-52 xl:w-60 object-contain shadow-lg"
+              className="w-44 lg:w-56 xl:w-64 flex-shrink-0 object-contain shadow-lg"
             />
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="w-56 lg:w-72 xl:w-80 object-contain drop-shadow-xl"
+              className="flex-1 min-w-0 max-w-[420px] lg:max-w-[520px] object-contain drop-shadow-xl"
               style={{ mixBlendMode: "multiply" }}
             />
           </div>
