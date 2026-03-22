@@ -515,18 +515,18 @@ function TargetMarketSection() {
 
 function AdminPanelSection() {
   const leftFeatures = [
-    { title: "Dashboard", desc: "Live snapshot of your entire restaurant — items, categories, customers, coupons and reservations at a glance. Quick action buttons to jump anywhere instantly." },
-    { title: "Menu Items", desc: "Add, edit or delete dishes with image, price, veg/non-veg tag, allergens and nutritional info. Mark items available or unavailable instantly." },
-    { title: "Categories", desc: "Build categories, subcategories and deeper levels. Reorder or hide any category in one click." },
-    { title: "Smart Picks", desc: "Highlight dishes under Today's Special, Chef's Special or any custom section. Update picks anytime without touching the main menu." },
-    { title: "Coupons", desc: "Set % off or flat discounts with date, day or hourly validity. Add rules like single use or first visit only." },
+    { num: "1.", title: "Dashboard", desc: "Live snapshot of items, customers, coupons and reservations. Jump to any section instantly." },
+    { num: "2.", title: "Menu Items", desc: "Add, edit or delete dishes with image, price, veg/non-veg, allergens and nutritional info. Toggle available or unavailable in one click." },
+    { num: "3.", title: "Categories", desc: "Build categories, subcategories and deeper levels. Reorder or hide any category instantly." },
+    { num: "4.", title: "Smart Picks", desc: "Highlight dishes under Today's Special or Chef's Special. Update picks anytime without touching the main menu." },
+    { num: "5.", title: "Coupons", desc: "Set % off or flat discounts with date, day or hourly validity. Add single use or first visit rules." },
   ];
   const rightFeatures = [
-    { title: "Customers", desc: "Auto-captures name and number when they scan the QR code. View and manage your full customer list from the panel." },
-    { title: "Reservations", desc: "See all bookings — date, time, guests and occasion in one view. Filter by date and export as CSV." },
-    { title: "Call Waiter", desc: "Customer taps Call Waiter on the menu — admin panel rings instantly with the table number and name." },
-    { title: "Analytics", desc: "Track menu performance, popular dishes, peak hours and customer visit trends. Make smarter decisions with real data." },
-    { title: "Restaurant Settings", desc: "Update logo, location, hours, contact, social links and welcome screen from one place. Show or hide each on the customer menu." },
+    { num: "6.", title: "Customers", desc: "Auto-captures name and number on QR scan. View and manage your full customer list in one place." },
+    { num: "7.", title: "Reservations", desc: "See all bookings with date, time, guests and occasion. Filter by date and export as CSV." },
+    { num: "8.", title: "Call Waiter", desc: "Customer taps Call Waiter on the menu and admin panel rings instantly with table number and name." },
+    { num: "9.", title: "Analytics", desc: "Track popular dishes, peak hours and customer visit trends. Make smarter decisions with real data." },
+    { num: "10.", title: "Restaurant Settings", desc: "Update logo, location, hours, contact, social links and welcome screen. Show or hide each on the customer menu." },
   ];
 
   return (
@@ -545,7 +545,7 @@ function AdminPanelSection() {
           <Reveal className="flex flex-col gap-6">
             {leftFeatures.map((f) => (
               <div key={f.title}>
-                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.title}</h4>
+                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
                 <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
               </div>
             ))}
@@ -564,7 +564,7 @@ function AdminPanelSection() {
           <Reveal delay={0.15} className="flex flex-col gap-6">
             {rightFeatures.map((f) => (
               <div key={f.title}>
-                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.title}</h4>
+                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
                 <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
               </div>
             ))}
