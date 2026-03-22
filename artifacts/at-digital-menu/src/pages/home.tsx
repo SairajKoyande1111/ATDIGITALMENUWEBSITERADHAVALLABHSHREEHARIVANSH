@@ -32,15 +32,38 @@ function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
-  const navLinkStyle: React.CSSProperties = {
-    fontFamily: "'Open Sans', sans-serif",
-    fontWeight: 600,
-    fontSize: "15px",
-    color: "#111827",
-  };
-
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav py-1" : "bg-transparent py-2"}`}>
+      <style dangerouslySetInnerHTML={{__html: `
+        .nav-link {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          color: #111827;
+          text-decoration: none;
+          position: relative;
+          padding-bottom: 3px;
+          white-space: nowrap;
+          transition: color 0.25s ease;
+        }
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0%;
+          background-color: #b45309;
+          transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          border-radius: 2px;
+        }
+        .nav-link:hover {
+          color: #b45309;
+        }
+        .nav-link:hover::after {
+          width: 100%;
+        }
+      `}} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
           {/* Mobile spacer to balance hamburger so logo centres properly */}
@@ -55,13 +78,12 @@ function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                style={navLinkStyle}
-                className="hover:text-primary transition-colors whitespace-nowrap"
+                className="nav-link"
               >
                 {link.name}
               </a>
