@@ -539,9 +539,29 @@ function AdminPanelSection() {
           </h2>
         </Reveal>
 
-        <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+        {/* Mobile: laptop full-width on top */}
+        <Reveal className="lg:hidden mb-8">
+          <img
+            src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
+            alt="Admin Panel on MacBook"
+            className="w-full object-contain drop-shadow-xl"
+          />
+        </Reveal>
 
-          {/* Left: 5 features — left aligned */}
+        {/* Mobile: 2-col feature grid below laptop — left col: 1-5, right col: 6-10 */}
+        <div className="lg:hidden grid grid-cols-2 grid-rows-5 grid-flow-col gap-x-6 gap-y-5 mb-4">
+          {[...leftFeatures, ...rightFeatures].map((f) => (
+            <div key={f.title}>
+              <h4 className="text-sm font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
+              <p className="text-xs text-slate-900 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: 3-col layout — left | laptop | right */}
+        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+
+          {/* Left: 5 features */}
           <Reveal className="flex flex-col gap-6">
             {leftFeatures.map((f) => (
               <div key={f.title}>
@@ -552,7 +572,7 @@ function AdminPanelSection() {
           </Reveal>
 
           {/* Centre: Laptop */}
-          <Reveal delay={0.1} className="hidden lg:flex justify-center">
+          <Reveal delay={0.1} className="flex justify-center">
             <img
               src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
               alt="Admin Panel on MacBook"
@@ -560,7 +580,7 @@ function AdminPanelSection() {
             />
           </Reveal>
 
-          {/* Right: 5 features — left aligned */}
+          {/* Right: 5 features */}
           <Reveal delay={0.15} className="flex flex-col gap-6">
             {rightFeatures.map((f) => (
               <div key={f.title}>
@@ -568,15 +588,6 @@ function AdminPanelSection() {
                 <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
               </div>
             ))}
-          </Reveal>
-
-          {/* Mobile: laptop shown between columns */}
-          <Reveal className="lg:hidden col-span-full flex justify-center mt-2">
-            <img
-              src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
-              alt="Admin Panel on MacBook"
-              className="w-full max-w-sm object-contain drop-shadow-xl"
-            />
           </Reveal>
         </div>
       </div>
