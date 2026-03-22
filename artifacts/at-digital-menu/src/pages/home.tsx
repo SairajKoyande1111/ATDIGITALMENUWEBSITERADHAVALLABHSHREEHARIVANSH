@@ -584,9 +584,9 @@ function AdminPanelSection() {
           <img
             src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
             alt="Admin Panel on MacBook"
-            className="w-[680px] xl:w-[760px] object-contain drop-shadow-xl -mb-2"
+            className="w-[680px] xl:w-[760px] object-contain drop-shadow-xl -mt-6"
           />
-          <p className="text-lg text-slate-900 text-center mt-3">
+          <p className="text-lg text-slate-900 text-center mt-6">
             Manage from Anywhere, on Any Device.
           </p>
           <p className="text-sm text-slate-900 text-center mt-1">
