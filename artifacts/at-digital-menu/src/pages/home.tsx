@@ -530,7 +530,8 @@ function AdminPanelSection() {
   ];
 
   return (
-    <section id="admin-panel" className="py-14 bg-white">
+    <section id="admin-panel" className="py-14 bg-white overflow-hidden">
+      {/* Title — normal padded container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
@@ -557,39 +558,39 @@ function AdminPanelSection() {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Desktop: 3-col layout — left | laptop | right */}
-        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+      {/* Desktop: full-bleed 3-col — features at edges, big laptop centre */}
+      <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center">
 
-          {/* Left: 5 features */}
-          <Reveal className="flex flex-col gap-6">
-            {leftFeatures.map((f) => (
-              <div key={f.title}>
-                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
-                <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </Reveal>
+        {/* Left: 5 features — pushed to right edge of col */}
+        <Reveal className="flex flex-col gap-6 pl-8 xl:pl-16 pr-6">
+          {leftFeatures.map((f) => (
+            <div key={f.title}>
+              <h4 className="text-base font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
+              <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </Reveal>
 
-          {/* Centre: Laptop */}
-          <Reveal delay={0.1} className="flex justify-center">
-            <img
-              src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
-              alt="Admin Panel on MacBook"
-              className="w-[520px] object-contain drop-shadow-xl"
-            />
-          </Reveal>
+        {/* Centre: Laptop — larger, no side margin */}
+        <Reveal delay={0.1} className="flex justify-center">
+          <img
+            src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
+            alt="Admin Panel on MacBook"
+            className="w-[680px] xl:w-[760px] object-contain drop-shadow-xl"
+          />
+        </Reveal>
 
-          {/* Right: 5 features */}
-          <Reveal delay={0.15} className="flex flex-col gap-6">
-            {rightFeatures.map((f) => (
-              <div key={f.title}>
-                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
-                <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </Reveal>
-        </div>
+        {/* Right: 5 features — pushed to left edge of col */}
+        <Reveal delay={0.15} className="flex flex-col gap-6 pr-8 xl:pr-16 pl-6">
+          {rightFeatures.map((f) => (
+            <div key={f.title}>
+              <h4 className="text-base font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
+              <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </Reveal>
       </div>
     </section>
   );
