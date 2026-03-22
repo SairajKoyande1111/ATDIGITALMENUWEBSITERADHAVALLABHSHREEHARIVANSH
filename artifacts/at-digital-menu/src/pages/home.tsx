@@ -573,13 +573,19 @@ function AdminPanelSection() {
           ))}
         </Reveal>
 
-        {/* Centre: Laptop — larger, no side margin */}
-        <Reveal delay={0.1} className="flex justify-center">
+        {/* Centre: Laptop + tagline below */}
+        <Reveal delay={0.1} className="flex flex-col items-center">
           <img
             src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
             alt="Admin Panel on MacBook"
-            className="w-[680px] xl:w-[760px] object-contain drop-shadow-xl"
+            className="w-[680px] xl:w-[760px] object-contain drop-shadow-xl -mb-2"
           />
+          <p className="text-lg font-bold text-primary text-center mt-3">
+            Manage from Anywhere, on Any Device.
+          </p>
+          <p className="text-sm font-semibold text-primary text-center mt-1">
+            Mobile, tablet or desktop — it works everywhere, anytime, from any part of the world.
+          </p>
         </Reveal>
 
         {/* Right: 5 features — pushed to left edge of col */}
