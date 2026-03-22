@@ -24,10 +24,20 @@ function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#how-it-works" },
     { name: "Pricing", href: "#pricing" },
+    { name: "Why Us", href: "#why-us" },
+    { name: "Contact", href: "#contact" },
   ];
+
+  const navLinkStyle: React.CSSProperties = {
+    fontFamily: "'Open Sans', sans-serif",
+    fontWeight: 600,
+    fontSize: "15px",
+    color: "#111827",
+  };
 
   return (
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav py-1" : "bg-transparent py-2"}`}>
@@ -45,12 +55,13 @@ function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                style={navLinkStyle}
+                className="hover:text-primary transition-colors whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -59,13 +70,14 @@ function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" className="font-semibold">Log in</Button>
-            <Button>Get Started Free</Button>
+            <Button style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 700, fontSize: "15px" }}>
+              Get Started Free
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2 text-slate-600"
+          <button
+            className="md:hidden p-2 text-slate-800"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X /> : <MenuIcon />}
@@ -75,20 +87,22 @@ function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl py-4 px-4 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl py-4 px-4 flex flex-col gap-2">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
-              className="text-base font-medium text-slate-800 p-2 hover:bg-slate-50 rounded-lg"
+              style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600, color: "#111827", fontSize: "15px" }}
+              className="p-2 hover:bg-slate-50 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
           <div className="h-px bg-slate-100 w-full my-2"></div>
-          <Button variant="outline" className="w-full justify-center">Log in</Button>
-          <Button className="w-full justify-center">Get Started Free</Button>
+          <Button className="w-full justify-center" style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 700 }}>
+            Get Started Free
+          </Button>
         </div>
       )}
     </header>
@@ -491,7 +505,7 @@ function ValueSection() {
   ];
 
   return (
-    <section className="py-14 bg-white">
+    <section id="why-us" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight md:whitespace-nowrap">
@@ -728,7 +742,7 @@ function ContactSection() {
   ];
 
   return (
-    <section className="py-14 bg-white">
+    <section id="contact" className="py-14 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 leading-tight">
