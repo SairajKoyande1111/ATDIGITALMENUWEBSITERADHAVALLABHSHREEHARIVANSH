@@ -550,9 +550,14 @@ function AdminPanelSection() {
           <p className="text-base text-slate-900 text-center mt-3">
             Manage from Anywhere, on Any Device.
           </p>
-          <p className="text-sm text-slate-900 text-center mt-1 mb-6">
+          <p className="text-sm text-slate-900 text-center mt-1">
             Mobile, Tablet or Desktop It works Everywhere, anytime, from any part of the World.
           </p>
+          <img
+            src={`${import.meta.env.BASE_URL}images/phone-mockup.png`}
+            alt="Mobile phone mockup"
+            className="w-full object-contain mt-4 mb-2"
+          />
         </Reveal>
 
         {/* Mobile: single-column list below laptop */}
@@ -592,6 +597,11 @@ function AdminPanelSection() {
           <p className="text-sm text-slate-900 text-center mt-1">
             Mobile, Tablet or Desktop It works Everywhere, anytime, from any part of the World.
           </p>
+          <img
+            src={`${import.meta.env.BASE_URL}images/phone-mockup.png`}
+            alt="Mobile phone mockup"
+            className="w-full object-contain mt-4"
+          />
         </Reveal>
 
         {/* Right: 5 features — pushed to left edge of col */}
