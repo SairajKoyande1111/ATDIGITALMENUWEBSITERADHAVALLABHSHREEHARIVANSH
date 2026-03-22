@@ -439,11 +439,37 @@ function FeaturesSection() {
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight md:whitespace-nowrap">
             Smart Menus Built with <span className="text-primary">Smart Features</span>
           </h2>
-          <img
-            src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
-            alt="AT Digital Menu on Smartphone"
-            className="mx-auto w-48 sm:w-56 md:w-64 object-contain drop-shadow-xl"
-          />
+
+          {/* Desktop: phone | QR card | phone */}
+          <div className="hidden md:flex items-center justify-center gap-6 lg:gap-10">
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+              alt="AT Digital Menu on Smartphone"
+              className="w-56 lg:w-72 xl:w-80 object-contain drop-shadow-xl"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}images/qr-card.png`}
+              alt="Scan to View Menu QR Card"
+              className="w-40 lg:w-52 xl:w-60 object-contain shadow-lg"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+              alt="AT Digital Menu on Smartphone"
+              className="w-56 lg:w-72 xl:w-80 object-contain drop-shadow-xl"
+              style={{ mixBlendMode: "multiply" }}
+            />
+          </div>
+
+          {/* Mobile: single large phone */}
+          <div className="md:hidden flex justify-center">
+            <img
+              src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+              alt="AT Digital Menu on Smartphone"
+              className="w-[85%] object-contain drop-shadow-xl"
+              style={{ mixBlendMode: "multiply" }}
+            />
+          </div>
         </Reveal>
 
         <div className="grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
