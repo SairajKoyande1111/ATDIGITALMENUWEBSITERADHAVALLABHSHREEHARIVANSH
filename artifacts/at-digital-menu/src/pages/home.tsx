@@ -548,8 +548,8 @@ function AdminPanelSection() {
           />
         </Reveal>
 
-        {/* Mobile: 2-col feature grid below laptop — left col: 1-5, right col: 6-10 */}
-        <div className="lg:hidden grid grid-cols-2 grid-rows-5 grid-flow-col gap-x-6 gap-y-5 mb-4">
+        {/* Mobile: single-column list below laptop */}
+        <div className="lg:hidden flex flex-col gap-5 mb-4">
           {[...leftFeatures, ...rightFeatures].map((f) => (
             <div key={f.title}>
               <h4 className="text-sm font-semibold text-slate-900 mb-1">{f.num} {f.title}</h4>
