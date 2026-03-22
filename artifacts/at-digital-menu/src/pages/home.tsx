@@ -435,10 +435,15 @@ function FeaturesSection() {
   return (
     <section id="features" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="text-center mx-auto mb-10">
+        <Reveal className="text-center mx-auto mb-8">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight md:whitespace-nowrap">
             Smart Menus Built with <span className="text-primary">Smart Features</span>
           </h2>
+          <img
+            src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
+            alt="AT Digital Menu on Smartphone"
+            className="mx-auto w-48 sm:w-56 md:w-64 object-contain drop-shadow-xl"
+          />
         </Reveal>
 
         <div className="grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
