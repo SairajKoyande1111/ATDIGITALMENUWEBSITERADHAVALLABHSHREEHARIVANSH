@@ -444,25 +444,25 @@ function FeaturesSection() {
         <div className="grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
           {features.map((feature, i) => (
             <Reveal key={i} delay={i * 0.05}>
-              <div className={`flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-2 md:gap-3 group cursor-pointer px-2 md:px-4 py-4 xl:py-3 xl:border-r xl:border-slate-100${(i + 1) % 4 === 0 ? ' xl:border-r-0' : ''}`}>
+              <div className={`flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-2 md:gap-3 group cursor-pointer px-1 md:px-4 py-4 xl:py-3 xl:border-r xl:border-slate-100${(i + 1) % 4 === 0 ? ' xl:border-r-0' : ''}`}>
                 <div className="shrink-0">
                   {feature.img ? (
                     <img
                       src={feature.img}
                       alt={feature.title}
-                      className="w-12 h-12 md:w-20 md:h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
+                      className="w-16 h-16 md:w-20 md:h-20 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-md"
                     />
                   ) : feature.icon ? (
-                    <div className="w-12 h-12 md:w-20 md:h-20 bg-primary/5 text-primary rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                      <feature.icon className="h-6 w-6 md:h-10 md:w-10" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/5 text-primary rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      <feature.icon className="h-8 w-8 md:h-10 md:w-10" />
                     </div>
                   ) : (
-                    <div className="w-12 h-12 md:w-20 md:h-20 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 flex items-center justify-center">
                       <span className="text-xs text-slate-400 font-medium">Soon</span>
                     </div>
                   )}
                 </div>
-                <h3 className="text-xs md:text-base font-semibold text-slate-900 leading-snug">{feature.title}</h3>
+                <h3 className="text-sm md:text-base font-semibold text-slate-900 leading-snug">{feature.title}</h3>
               </div>
             </Reveal>
           ))}
