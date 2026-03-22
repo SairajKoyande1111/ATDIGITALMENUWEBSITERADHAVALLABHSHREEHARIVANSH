@@ -514,51 +514,21 @@ function TargetMarketSection() {
 }
 
 function AdminPanelSection() {
-  const features = [
-    {
-      num: "1",
-      title: "Menu Items",
-      desc: "Add, edit or delete dishes with image, price, description, veg/non-veg tag, ingredients, allergens and nutritional info. Mark any item available or unavailable in one click.",
-    },
-    {
-      num: "2",
-      title: "Categories",
-      desc: "Organise your menu into categories, subcategories and deeper levels. Reorder, show or hide any category at any time.",
-    },
-    {
-      num: "3",
-      title: "Smart Picks",
-      desc: "Highlight specific dishes under sections like Today's Special or Chef's Special. Update your picks anytime without editing the main menu.",
-    },
-    {
-      num: "4",
-      title: "Coupons",
-      desc: "Create percentage or flat amount discounts with validity by date, day or specific hours. Set rules like single use, first visit or limited redemptions.",
-    },
-    {
-      num: "5",
-      title: "Customers",
-      desc: "Customer name and number is auto-captured when they scan the QR code and enter their details. View and manage your full customer list from the panel.",
-    },
-    {
-      num: "6",
-      title: "Reservations",
-      desc: "View all table bookings with name, phone, date, time, guest count and occasion in one place. Filter by date and export the full list as a CSV.",
-    },
-    {
-      num: "7",
-      title: "Call Waiter",
-      desc: "When a customer taps Call Waiter on the digital menu, the admin panel gets an instant bell notification. It shows the exact table number and customer name.",
-    },
-    {
-      num: "8",
-      title: "Restaurant Settings",
-      desc: "Update your logo, location, contact number, opening hours, social media links and welcome screen — all from one place. Show or hide each section on the customer-facing menu.",
-    },
+  const leftFeatures = [
+    { title: "Menu Items", desc: "Add, edit or delete dishes with image, price, description, veg/non-veg tag, ingredients, allergens and nutritional info. Mark any item available or unavailable in one click." },
+    { title: "Categories", desc: "Organise your menu into categories, subcategories and deeper levels. Reorder, show or hide any category at any time." },
+    { title: "Smart Picks", desc: "Highlight specific dishes under sections like Today's Special or Chef's Special. Update your picks anytime without editing the main menu." },
+    { title: "Coupons", desc: "Create percentage or flat amount discounts with validity by date, day or specific hours. Set rules like single use, first visit or limited redemptions." },
+  ];
+  const rightFeatures = [
+    { title: "Customers", desc: "Customer name and number is auto-captured when they scan the QR code and enter their details. View and manage your full customer list from the panel." },
+    { title: "Reservations", desc: "View all table bookings with name, phone, date, time, guest count and occasion in one place. Filter by date and export the full list as a CSV." },
+    { title: "Call Waiter", desc: "When a customer taps Call Waiter on the digital menu, the admin panel gets an instant bell notification. It shows the exact table number and customer name." },
+    { title: "Restaurant Settings", desc: "Update your logo, location, contact number, opening hours, social media links and welcome screen — all from one place. Show or hide each section on the customer-facing menu." },
   ];
 
   return (
-    <section id="admin-panel" className="py-14 bg-slate-50">
+    <section id="admin-panel" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
@@ -567,31 +537,44 @@ function AdminPanelSection() {
           </h2>
         </Reveal>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Left: Laptop image */}
-          <Reveal>
+        <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+
+          {/* Left: 4 features */}
+          <Reveal className="flex flex-col gap-7">
+            {leftFeatures.map((f) => (
+              <div key={f.title} className="text-right">
+                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.title}</h4>
+                <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </Reveal>
+
+          {/* Centre: Laptop */}
+          <Reveal delay={0.1} className="hidden lg:flex justify-center">
             <img
               src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
               alt="Admin Panel on MacBook"
-              className="w-full object-contain drop-shadow-xl"
+              className="w-[520px] object-contain drop-shadow-xl"
             />
           </Reveal>
 
-          {/* Right: Numbered feature list */}
-          <Reveal delay={0.15}>
-            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-              {features.map((f) => (
-                <div key={f.num} className="flex gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold mt-0.5">
-                    {f.num}
-                  </div>
-                  <div>
-                    <h4 className="text-base font-bold text-slate-900 mb-1">{f.title}</h4>
-                    <p className="text-sm text-slate-600 leading-relaxed">{f.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Right: 4 features */}
+          <Reveal delay={0.15} className="flex flex-col gap-7">
+            {rightFeatures.map((f) => (
+              <div key={f.title}>
+                <h4 className="text-base font-semibold text-slate-900 mb-1">{f.title}</h4>
+                <p className="text-sm text-slate-900 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </Reveal>
+
+          {/* Mobile: laptop shown below both columns */}
+          <Reveal className="lg:hidden col-span-full flex justify-center mt-2">
+            <img
+              src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
+              alt="Admin Panel on MacBook"
+              className="w-full max-w-sm object-contain drop-shadow-xl"
+            />
           </Reveal>
         </div>
       </div>
