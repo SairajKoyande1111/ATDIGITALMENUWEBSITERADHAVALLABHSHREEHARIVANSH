@@ -541,12 +541,18 @@ function AdminPanelSection() {
         </Reveal>
 
         {/* Mobile: laptop full-width on top */}
-        <Reveal className="lg:hidden mb-8">
+        <Reveal className="lg:hidden mb-4">
           <img
             src={`${import.meta.env.BASE_URL}images/admin-panel-laptop.png`}
             alt="Admin Panel on MacBook"
             className="w-full object-contain drop-shadow-xl"
           />
+          <p className="text-base text-slate-900 text-center mt-3">
+            Manage from Anywhere, on Any Device.
+          </p>
+          <p className="text-sm text-slate-900 text-center mt-1 mb-6">
+            Mobile, Tablet or Desktop It works Everywhere, anytime, from any part of the World.
+          </p>
         </Reveal>
 
         {/* Mobile: single-column list below laptop */}
@@ -580,11 +586,11 @@ function AdminPanelSection() {
             alt="Admin Panel on MacBook"
             className="w-[680px] xl:w-[760px] object-contain drop-shadow-xl -mb-2"
           />
-          <p className="text-lg font-bold text-primary text-center mt-3">
+          <p className="text-lg text-slate-900 text-center mt-3">
             Manage from Anywhere, on Any Device.
           </p>
-          <p className="text-sm font-semibold text-primary text-center mt-1">
-            Mobile, tablet or desktop — it works everywhere, anytime, from any part of the world.
+          <p className="text-sm text-slate-900 text-center mt-1">
+            Mobile, Tablet or Desktop It works Everywhere, anytime, from any part of the World.
           </p>
         </Reveal>
 
