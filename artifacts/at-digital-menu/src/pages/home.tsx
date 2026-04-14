@@ -205,7 +205,7 @@ function HeroSection() {
           </Reveal>
 
           {/* Image column — zero padding on mobile so phone+QR go full-bleed edge-to-edge */}
-          <Reveal delay={0.2} className="flex items-start order-1 lg:order-2 lg:-ml-36 w-full">
+          <Reveal delay={0.2} className="flex items-start order-1 lg:order-2 w-full">
             {/* Phone */}
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
