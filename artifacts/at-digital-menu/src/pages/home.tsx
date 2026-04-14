@@ -210,11 +210,11 @@ function HeroSection() {
             <img
               src={`${import.meta.env.BASE_URL}images/hero-phone.png`}
               alt="AT Digital Menu on Smartphone"
-              className="-ml-24 w-[55%] sm:ml-0 sm:w-full sm:max-w-[210px] lg:max-w-[290px] object-contain flex-shrink-0"
+              className="ml-0 w-[50%] sm:ml-0 sm:w-full sm:max-w-[210px] lg:max-w-[290px] object-contain flex-shrink-0"
               style={{ mixBlendMode: "multiply" }}
             />
             {/* QR column — flex-1 on mobile fills remaining width, fixed on desktop */}
-            <div className="flex-1 sm:flex-none flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0 -ml-24 sm:-ml-8 lg:ml-3 self-start mt-2 sm:mt-8 pr-2 sm:pr-0">
+            <div className="flex-1 sm:flex-none flex flex-col gap-1 sm:gap-2 sm:flex-shrink-0 ml-2 sm:-ml-8 lg:ml-3 self-start mt-2 sm:mt-8 pr-2 sm:pr-0">
               <img
                 src={`${import.meta.env.BASE_URL}images/qr-card.png`}
                 alt="Scan to View Menu QR Card"
